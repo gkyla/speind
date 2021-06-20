@@ -1,18 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <Navbar />
+  <router-view />
+  <Footer />
 </template>
 
+<script>
+import Footer from '@/components/Footer.vue';
+import Navbar from '@/components/Navbar.vue';
+
+export default {
+  components: {
+    Footer,
+    Navbar,
+  },
+};
+</script>
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+body,
+html {
+  height: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  height: 100%;
+  color: white;
+}
+
+.bg-speind-dark {
+  background-color: #18191c;
 }
 
 #nav {
@@ -26,5 +48,36 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.heading {
+  margin: 2rem;
+  padding-top: 6rem;
+  display: inline-block;
+  font-size: 3.5rem;
+  color: #fff;
+  position: relative;
+  letter-spacing: 0.2rem;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-top: 0.4rem solid #ec4357;
+  border-left: 0.4rem solid white;
+}
+
+.heading::before {
+  top: 5.8rem;
+  left: -2rem;
+}
+
+.heading::after {
+  bottom: -0.5rem;
+  right: -2rem;
+  transform: rotate(180deg);
 }
 </style>
