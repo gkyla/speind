@@ -10,7 +10,7 @@
           class="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-10"
           data-aos="fade-up"
           data-aos-delay="50"
-          data-aos-duration="2000"
+          data-aos-duration="1250"
         >
           <CardAbout
             name="Agits Zakky A"

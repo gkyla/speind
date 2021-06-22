@@ -1,16 +1,29 @@
 <template>
   <header class="header">
-    <router-link to="#" class="logo">Buat Logo</router-link>
+    <router-link
+      to="#"
+      class="logo"
+    >Buat Logo</router-link>
 
     <div class="fas fa-bars"></div>
 
     <nav class="navbar">
       <ul>
-        <li><router-link to="/home">Home</router-link></li>
-        <li><router-link to="/sejarah">Sejarah</router-link></li>
-        <li><router-link to="/article">Article</router-link></li>
-        <li><router-link to="/about">About Us</router-link></li>
-        <li><router-link to="/faq">FAQ</router-link></li>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/sejarah">Sejarah</router-link>
+        </li>
+        <li>
+          <router-link to="/article">Article</router-link>
+        </li>
+        <li>
+          <router-link to="/about">About Us</router-link>
+        </li>
+        <li>
+          <router-link to="/faq">FAQ</router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,7 +45,10 @@ export default {
         $('.navbar').removeClass('nav-toggle');
 
         if ($(window).scrollTop() > 30) {
-          $('.header').css({ background: '#222831', 'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)' });
+          $('.header').css({
+            background: '#222831',
+            'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)',
+          });
         } else {
           $('.header').css({ background: 'none', 'box-shadow': 'none' });
         }

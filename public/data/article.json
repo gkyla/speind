@@ -1,0 +1,10 @@
+{
+   "article": [
+      {
+         "id": "1",
+         "name": "5 Alasan Mengapa Kamu Harus Masuk SMK",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "../src/assets/article/tkj2.jpeg  "
+      }
+   ]
+}

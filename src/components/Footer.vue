@@ -1,12 +1,12 @@
 <template>
   <footer>
-    <div class="container mx-auto px-5">
+    <div class="container mx-auto">
       <div class="footer-left">
         <p class="footer-links">
-          <router-link to="/home">Home</router-link>
+          <router-link to="/">Home</router-link>
           <router-link to="/sejarah">Sejarah</router-link>
           <router-link to="/article">Article</router-link>
-          <router-link to="/aboutus">About Us</router-link>
+          <router-link to="/about">About Us</router-link>
           <router-link to="/faq">FAQ</router-link>
         </p>
 

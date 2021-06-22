@@ -114,7 +114,6 @@ export default {
 }
 
 .sosmed-link {
-  /* position: absolute; */
   bottom: 5px;
   left: 10px;
   display: inline-block;
@@ -129,7 +128,7 @@ export default {
 
 @media screen (min-width: 1200px) {
   #card-ribbon #profile-picture {
-    height: 400px;
+    height: 300px;
     object-fit: cover;
   }
 }

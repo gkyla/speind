@@ -1,6 +1,10 @@
 <template>
   <Navbar />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <Footer />
 </template>
 
@@ -13,19 +17,40 @@ export default {
     Footer,
     Navbar,
   },
+  mounted() {
+    // eslint-disable-next-line
+      AOS.init({
+      once: false,
+    });
+  },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.2s ease-in-out all;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
 
 body,
 html {
+  background-color: #18191c;
   height: 100%;
 }
 
 #app {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
