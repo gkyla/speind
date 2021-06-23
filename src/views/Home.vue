@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-auto w-100 px-3">
     <section id="intro">
       <div class="top-right-gradient"></div>
       <div class="wrapper">
@@ -38,7 +38,7 @@
 
     <main id="content">
       <section class="section-1">
-        <div class="container mx-auto text-center">
+        <div class="wrapper text-center">
           <h1
             class="heading"
             data-aos="zoom-out-up"
@@ -73,8 +73,8 @@
             Indonesia Dan Smk masa Kini Serta yang akan datang.
           </p>
 
-          <div class="row grid grid-cols-1 md:grid-cols-2">
-            <div class="col-md-6 col-12">
+          <div class="row grid grid-cols-1 md:grid-cols-2 mt-12">
+            <div class="col-md-6 col-pr-12">
               <div class="gambar">
                 <img
                   data-aos="fade-right"
@@ -117,7 +117,9 @@
 
       <section class="section-2">
         <div class="container mx-auto text-center">
-          <div class="row">
+          <div
+            class="row grid grid-cols-1 md:grid-cols-2 place-items-center mt-12"
+          >
             <div class="col-md-6 col-12">
               <div
                 class="panel2 text-left"
@@ -143,11 +145,13 @@
               </div>
             </div>
             <div class="col-md-6 col-12">
-              <div class="gambar">
+              <div
+                class="gambar"
+                data-aos="fade-left"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 <img
-                  data-aos="fade-left"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
                   src="../assets/images/undraw_career_progress_ivdb.svg"
                   alt="image"
                   class=""
@@ -531,8 +535,14 @@ export default {
   text-align: left;
   padding: 5vmin;
   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  font-family: "Rubik", cursive;
+  /* font-family: "Rubik", cursive; */
   z-index: 1;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 </style>
 
@@ -543,7 +553,7 @@ export default {
   margin: 2rem;
   padding-top: 6rem;
   display: inline-block;
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
   color: #fff;
   position: relative;
   letter-spacing: 0.2rem;
@@ -605,6 +615,7 @@ export default {
   width: 100%;
   max-width: 400px;
   padding: 3em 0;
+  text-align: left;
 }
 
 #intro .intro-left h1 {
@@ -638,6 +649,7 @@ export default {
   display: block;
   width: 100%;
   max-width: 200px;
+  font-size: 1em;
   margin-top: 2em;
   padding: 1em;
   text-align: center;
@@ -660,7 +672,7 @@ export default {
 }
 
 #intro .intro-right img {
-  margin-top: -380px;
+  /* margin-top: -380px; */
   max-width: 600px;
 }
 
@@ -686,9 +698,14 @@ export default {
 }
 
 .section-1 .row .col-md-6 .gambar img {
-  margin-top: 180px;
+  /* margin-top: 180px; */
   opacity: 0.8;
-  width: 80%;
+  width: 95%;
+}
+
+.section-1 .row .col-md-6 {
+  display: flex;
+  align-items: center;
 }
 
 .section-1 .row .col-md-6:last-child {
@@ -705,7 +722,7 @@ export default {
   text-align: left;
   padding: 5vmin;
   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  font-family: "Rubik", cursive;
+  /* font-family: "Rubik", cursive; */
   z-index: 1;
 }
 
@@ -714,12 +731,13 @@ export default {
 .section-1 .row .col-md-6 .panel1 h1 {
   font-weight: bold;
   padding: 0.4em 0;
-  font-size: 2.5em;
+  font-size: 1.5em;
+  color: black;
 }
 
 .section-1 .row .col-md-6 .panel1 p {
-  font-size: 1.5em;
-  color: rgba(0, 0, 0, 0.5);
+  /* font-size: 1.5em; */
+  color: rgba(0, 0, 0, 0.5) !important ;
 }
 
 .section-1 .row .col-md-6 .panel1 a {
@@ -728,6 +746,7 @@ export default {
   width: 100%;
   max-width: 140px;
   margin-top: 2em;
+  font-size: 0.7em;
   padding: 1em;
   text-align: center;
   color: #fff;
@@ -770,18 +789,19 @@ export default {
   text-align: left;
   padding: 5vmin;
   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  font-family: "Rubik", cursive;
+  /* font-family: "Rubik", cursive; */
   z-index: 1;
 }
 
 .section-2 .row .col-md-6 .panel2 h1 {
   font-weight: bold;
   padding: 0.4em 0;
-  font-size: 2.5em;
+  font-size: 1.5em;
+  color: black;
 }
 
 .section-2 .row .col-md-6 .panel2 p {
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -791,6 +811,7 @@ export default {
   width: 100%;
   max-width: 140px;
   margin-top: 2em;
+  font-size: 0.7em;
   padding: 1em;
   text-align: center;
   color: #fff;
@@ -822,7 +843,7 @@ export default {
 
 .desksejarah {
   color: #fff;
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
   line-height: 1.75em;
 }
 
@@ -977,7 +998,7 @@ export default {
 .w3l-timeline-content-6 .timeline-content-6 .desc {
   margin: 1.4em 0.75em 0 0;
   color: #fff;
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
   line-height: 1.75em;
 }
 
@@ -1080,6 +1101,10 @@ export default {
     margin-left: 100px;
   }
 
+  #intro .intro-left {
+    text-align: center !important;
+  }
+
   #intro .intro-left .intro-cta {
     margin-top: -50px;
     z-index: 999;
@@ -1161,6 +1186,10 @@ export default {
   #intro h1::after {
     margin-left: 180px;
     margin-bottom: 10px;
+  }
+
+  .intro-left {
+    text-align: center;
   }
 
   #intro .intro-left .intro-cta {

@@ -28,7 +28,8 @@ export default {
 
 <style>
 /* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
 .fade-enter-active,
 .fade-leave-active {
@@ -43,14 +44,24 @@ export default {
   opacity: 1;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   background-color: #18191c;
   height: 100%;
+  width: 100%;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
 }
 
 #app {
-  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -79,7 +90,7 @@ html {
   margin: 2rem;
   padding-top: 6rem;
   display: inline-block;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: #fff;
   position: relative;
   letter-spacing: 0.2rem;

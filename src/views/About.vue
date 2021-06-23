@@ -3,7 +3,7 @@
     <div class="md:container md:mx-auto p-5">
       <div id="meet-our-team">
         <div class="text-center flex flex-col items-center">
-          <h1 class="heading">MEET THE TEAM</h1>
+          <h1 class="heading">TENTANG KAMI</h1>
         </div>
 
         <div
@@ -37,7 +37,7 @@
             </template>
           </CardAbout>
           <CardAbout
-            name="Steven Alward"
+            name="Steven Christian"
             imgSrc="https://unsplash.com/photos/-C-jTjc0g7I/download?force=true&w=640"
             imgPosition="top"
           >
