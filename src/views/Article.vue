@@ -2,7 +2,7 @@
   <div class="w-100 h-100 min-h-screen bg-speind-black">
     <h1 class="heading">ARTICLE</h1>
 
-    <div class="container mx-auto mt-5 px-2">
+    <div class="wrapper mx-auto mt-5 px-2">
       <div class="grid-week">
         <div
           class="box box1"
@@ -11,7 +11,7 @@
           data-aos-duration="1250"
         >
           <img
-            class="rounded-md"
+            class="rounded-sm"
             src="../assets/article/tkj.jpeg"
             alt=" Restaurant"
           />
@@ -28,7 +28,7 @@
           data-aos-duration="1250"
         >
           <img
-            class="rounded-md"
+            class="rounded-sm"
             src="../assets/about/placeholder.jpg"
             alt=" Restaurant"
           />
@@ -45,7 +45,7 @@
           data-aos-duration="1250"
         >
           <img
-            class="rounded-md"
+            class="rounded-sm"
             src="../assets/about/placeholder.jpg"
             alt=" Restaurant"
           />
@@ -114,7 +114,7 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-auto-rows: 200px;
-  gap: 17px;
+  gap: 10px;
   position: relative;
 }
 

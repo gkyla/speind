@@ -1,16 +1,16 @@
 <template>
-  <div class="mx-auto w-100 px-3">
+  <div class="mx-auto w-100 ">
+    <div class="top-right-gradient"></div>
     <section id="intro">
-      <div class="top-right-gradient"></div>
-      <div class="wrapper">
+      <div id="intro-top" class="wrapper grid place-items-center">
         <div
-          class="intro-left"
+          class="intro-left "
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-duration="1250"
         >
           <h1>
-            Sejarah Pendidikan Indonesia - Smk masa Kini dan yang akan datang
+            Sejarah Pendidikan Indonesia - SMK masa Kini dan yang akan datang
           </h1>
           <p>
             Mau tau tentang Sejarah Pendidikan yang ada di indonesia dan smk
@@ -24,8 +24,9 @@
             data-aos="fade-left"
             data-aos-delay="50"
             data-aos-duration="1000"
-            src="../assets/images/undraw_education_f8ru.svg"
+            src="../assets/images/undraw_studying_s3l7.svg"
             alt="image"
+            class="intro-right-img"
           />
         </div>
       </div>
@@ -36,7 +37,7 @@
 
     <!-- Content Start -->
 
-    <main id="content">
+    <main id="content" class="px-5">
       <section class="section-1">
         <div class="wrapper text-center">
           <h1
@@ -48,6 +49,15 @@
             PENDIDIKAN
           </h1>
           <br /><br />
+          <img
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            src="../assets/images/undraw_book_lover_mkck.svg"
+            class="pendidikan-img mx-auto mb-4"
+            alt="image"
+          />
+
           <p
             class="desksejarah"
             data-aos="fade-up"
@@ -116,7 +126,7 @@
       </section>
 
       <section class="section-2">
-        <div class="container mx-auto text-center">
+        <div class="wrapper mx-auto text-center">
           <div
             class="row grid grid-cols-1 md:grid-cols-2 place-items-center mt-12"
           >
@@ -165,7 +175,7 @@
       <!-- experience-education -->
       <section class="w3l-timeline-content-6">
         <div class="timeline-content-6 py-5">
-          <div class="container mx-auto py-lg-5 text-center">
+          <div class="wrapper mx-auto py-lg-5 text-center">
             <h1
               class="heading"
               data-aos="zoom-out-up"
@@ -539,11 +549,14 @@ export default {
   z-index: 1;
 }
 
-.wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+.pendidikan-img{
+  max-width: 400px
 }
+
+#intro .intro-right{
+  order: 0
+}
+
 </style>
 
 <style scoped>
@@ -580,16 +593,17 @@ export default {
   transform: rotate(180deg);
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-}
+} */
 
 /* Intro Page
 --------------------- */
 
 #intro {
+  width: 100%;
   font-size: 16px;
   line-height: 1.7;
   font-family: Roboto, sans-serif;
@@ -597,10 +611,10 @@ export default {
   position: relative;
   overflow: hidden;
   min-height: 660px;
-  padding-top: 4em;
+  padding-top: 120px
 }
 
-#intro .top-right-gradient {
+.top-right-gradient {
   position: absolute;
   top: -40%;
   right: -30%;
@@ -608,6 +622,7 @@ export default {
   height: 800px;
   border-radius: 50%;
   background: linear-gradient(#ee9ca7, #ec4357);
+  z-index: 99;
 }
 
 #intro .intro-left {
@@ -669,6 +684,7 @@ export default {
   display: inline-block;
   margin-left: 5.9em;
   padding-top: 80px;
+  z-index: 100;
 }
 
 #intro .intro-right img {
@@ -1015,9 +1031,14 @@ export default {
   margin: 1.4em 0 0 0.75em;
 }
 /* Resoponsiveness */
-@media (min-width: 1199px) and (max-width: 1272px) {
+@media (min-width: 1199px) {
   #intro .bottom-left-gradient {
     display: none;
+  }
+
+  #intro #intro-top{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 
@@ -1044,6 +1065,10 @@ export default {
 
 @media (min-width: 641px) and (max-width: 1099px) {
   /* intro responsive */
+  #intro-top{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 
   #intro {
     margin-top: -80px;
@@ -1070,7 +1095,7 @@ export default {
     border-radius: 50%;
   } */
 
-  #intro .top-right-gradient {
+   .top-right-gradient {
     position: absolute;
     /* z-index: -1; */
     top: 5%;
@@ -1082,8 +1107,8 @@ export default {
 
   #intro .intro-right img {
     /* padding-top: 100px; */
-    margin-left: -600px;
-    margin-top: 400px;
+    /* margin-left: -600px; */
+    /* margin-top: 400px; */
     width: 310px;
   }
 
@@ -1097,8 +1122,9 @@ export default {
     margin-bottom: 10px;
   }
 
+/* intro-left margin-left */
   .intro-left {
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 
   #intro .intro-left {
@@ -1161,7 +1187,7 @@ export default {
     border-radius: 50%;
   } */
 
-  #intro .top-right-gradient {
+   .top-right-gradient {
     position: absolute;
     /* z-index: -1; */
     top: -5%;
@@ -1172,7 +1198,6 @@ export default {
   }
 
   #intro .intro-right img {
-    z-index: 99;
     margin-left: -95px;
     margin-top: -80px;
     width: 310px;

@@ -31,6 +31,12 @@ export default {
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: 0.2s ease-in-out all;
