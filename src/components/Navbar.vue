@@ -1,29 +1,16 @@
 <template>
   <header class="header">
-    <router-link
-      to="#"
-      class="logo"
-    >Buat Logo</router-link>
+    <a href="#" class="logo">SPEIND</a>
 
     <div class="fas fa-bars"></div>
 
     <nav class="navbar">
       <ul>
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/sejarah">Sejarah</router-link>
-        </li>
-        <li>
-          <router-link to="/article">Article</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About Us</router-link>
-        </li>
-        <li>
-          <router-link to="/faq">FAQ</router-link>
-        </li>
+        <li><router-link to="/home">HOME</router-link></li>
+        <li><router-link to="/sejarah">SEJARAH</router-link></li>
+        <li><router-link to="/article">ARTICLE</router-link></li>
+        <li><router-link to="/aboutus">ABOUT US</router-link></li>
+        <li><router-link to="/faq">FAQ</router-link></li>
       </ul>
     </nav>
   </header>
@@ -65,12 +52,26 @@ body {
 </style>
 
 <style scoped>
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,12 +79,15 @@ body {
 }
 
 .header .logo {
-  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.5rem;
   color: #fff;
 }
 
-.header .logo i {
-  padding: 0 0.5rem;
+.header .logo:hover {
+  color: #ec4357;
+  transition: 0.5s;
 }
 
 .header .navbar ul {
@@ -94,11 +98,12 @@ body {
 }
 
 .header .navbar ul li {
-  margin: 0 1.2rem; /* ini */
+  margin: 1rem 1.5rem 0 1.5rem;
 }
 
 .header .navbar ul li a {
-  font-size: 1.2rem; /* ini */
+  text-decoration: none;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -134,7 +139,52 @@ body {
     background-color: #18191c;
     z-index: 999;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
-    margin-top: -6px;
+  }
+
+  .header .navbar ul {
+    height: 100%;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  .header .navbar ul li {
+    margin: 1rem 0;
+  }
+
+  .header .navbar ul li a {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .header .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .nav-toggle {
+    top: 5.8rem;
+  }
+}
+
+@media (max-width: 1099px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header .fa-bars {
+    transition: 0.5s;
+    display: block;
+  }
+
+  .header .navbar {
+    transition: 0.3s;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: #18191c;
+    z-index: 999;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
   }
 
   .header .navbar ul {
