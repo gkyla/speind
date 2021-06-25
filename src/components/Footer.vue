@@ -1,13 +1,17 @@
 <template>
   <footer>
-    <div class="container mx-auto">
+    <div class="wrapper footer-grid">
       <div class="footer-left">
+        <a href="#home">
+          <img src="images/logo.png" alt="logospeind" />
+        </a>
+
         <p class="footer-links">
-          <router-link to="/">Home</router-link>
-          <router-link to="/sejarah">Sejarah</router-link>
-          <router-link to="/article">Article</router-link>
-          <router-link to="/about">About Us</router-link>
-          <router-link to="/faq">FAQ</router-link>
+          <a id="from-left" href="#home">HOME</a>
+          <a href="sejarah.html">SEJARAH</a>
+          <a href="article.html">ARTICLE</a>
+          <a href="aboutus.html">ABOUT US</a>
+          <a href="faq.html">FAQ</a>
         </p>
 
         <p class="footer-company-name">&copy; 2021 - <span>SPEIND</span></p>
@@ -32,9 +36,9 @@
 
       <div class="footer-right">
         <p class="footer-connect">
-          <span> Lorem ipsum </span>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, vitae
-          consectetur enim.
+          <span> Dibuatnya website ini, </span>
+          Bertujuan untuk memberikan informasi seputar Sejarah Pendidikan
+          Indonesia dan Smk Masa Kini Serta Yang Akan Datang secara digital.
         </p>
 
         <div class="footer-icons">
@@ -62,15 +66,20 @@ footer {
   padding: 50px 0;
 }
 
-footer .footer-left,
+/* footer .footer-left,
 footer .footer-center,
 footer .footer-right {
   display: inline-block;
   vertical-align: top;
-}
+} */
 
-footer .footer-left {
+/* footer .footer-left {
   width: 40%;
+} */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.3fr 1fr;
 }
 
 footer .footer-left img {
@@ -107,9 +116,9 @@ footer .footer-company-name span {
   color: #ec4357;
 }
 
-footer .footer-center {
+/* footer .footer-center {
   width: 35%;
-}
+} */
 
 footer .footer-center i {
   background-color: #fff;
@@ -141,9 +150,9 @@ footer .footer-center p a {
   text-decoration: none;
 }
 
-footer .footer-right {
-  width: 20%;
-}
+/* footer .footer-right {
+  width: 24%;
+} */
 
 footer .footer-connect {
   line-height: 20px;
@@ -191,6 +200,10 @@ footer .footer-icons a:hover {
     padding: 20px 0 !important;
   }
 
+  .footer-left a {
+    display: none;
+  }
+
   footer .footer-left,
   footer .footer-center,
   footer .footer-right {
@@ -210,6 +223,14 @@ footer .footer-icons a:hover {
 
   footer .footer-connect {
     display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 }
 </style>

@@ -11,6 +11,8 @@
 <script>
 import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
+import $ from 'jquery';
+
 
 export default {
   components: {
@@ -18,10 +20,12 @@ export default {
     Navbar,
   },
   mounted() {
+    $(window).ready(() => {
     // eslint-disable-next-line
-      AOS.init({
-      once: false,
+      AOS.init();
     });
+    // eslint-disable-next-line
+    window.addEventListener("load", AOS.refresh)
   },
 };
 </script>
@@ -62,12 +66,14 @@ export default {
 body,
 html {
   background-color: #18191c;
-  height: 100%;
+  /* height: 100%; */
   /* width: 100%; */
   /* overflow-x: hidden; */
   /* min-height: 100vh; */
   /* min-width: 100vw; */
   /* overflow-x: hidden; */
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 #app {
@@ -78,9 +84,8 @@ html {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  min-width: 100vw;
+  /* min-width: 100vw; */
   color: white;
-  /* overflow-x: hidden; */
 }
 
 .bg-speind-dark {

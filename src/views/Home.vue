@@ -1,10 +1,12 @@
 <template>
-  <div class="wrapper mx-auto w-100">
-    <!-- <div class="top-right-gradient"></div> -->
+  <div class="wrapper mx-auto w-screen" id="home-body">
+    <img class="blob1" src="../assets/patterns/blob1.svg" />
+    <img class="blob3" src="../assets/patterns/blob3.svg" />
+    <!-- <img class="blob3" src="../assets/patterns/blob3.svg" /> -->
     <section id="intro">
-      <div id="intro-top" class="wrapper grid place-items-center">
+      <div id="intro-top" class="wrapper grid">
         <div
-          class="intro-left"
+          class="intro-left aos-area"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-duration="1250"
@@ -18,7 +20,7 @@
           </p>
           <a href="#content" class="intro-cta"> Lihat Selengkapnya </a>
         </div>
-        <div class="intro-right">
+        <div class="intro-right aos-area">
           <!-- Insert Image here -->
           <img
             data-aos="fade-left"
@@ -39,7 +41,7 @@
 
     <main id="content" class="">
       <section class="section-1">
-        <div class="text-center">
+        <div class="text-center aos-area">
           <h1
             class="heading"
             data-aos="zoom-out-up"
@@ -85,7 +87,7 @@
 
           <div class="row grid grid-cols-1 md:grid-cols-2 mt-12">
             <div class="col-md-6 col-pr-12">
-              <div class="gambar">
+              <div class="gambar aos-area">
                 <img
                   data-aos="fade-right"
                   data-aos-delay="50"
@@ -126,7 +128,7 @@
       </section>
 
       <section class="section-2">
-        <div class="wrapper mx-auto text-center">
+        <div class="mx-auto text-center">
           <div
             class="row grid grid-cols-1 md:grid-cols-2 place-items-center mt-12"
           >
@@ -549,12 +551,46 @@ export default {
   z-index: 1;
 }
 
+.blob1 {
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  right: -80px;
+  z-index: 99;
+}
+
+.blob3 {
+  width: 400px;
+  position: absolute;
+  top: 650px;
+  left: -190px;
+  z-index: 99;
+}
+
 .pendidikan-img {
   max-width: 400px;
 }
 
 #intro .intro-right {
   order: 0;
+}
+
+@media (max-width: 1366px) {
+  .blob1 {
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    right: -160px;
+    z-index: 998;
+  }
+
+  .blob3 {
+    width: 400px;
+    position: absolute;
+    top: 700px;
+    left: -230px;
+    z-index: 99;
+  }
 }
 </style>
 
@@ -608,21 +644,21 @@ export default {
   font-family: Roboto, sans-serif;
   background-color: #18191c;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   min-height: 660px;
   padding-top: 120px;
 }
 
-.top-right-gradient {
+/* .top-right-gradient {
   position: absolute;
-  top: -40%;
-  right: -30%;
-  width: 800px;
-  height: 800px;
+  top: 0px;
+  right: -10%;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background: linear-gradient(#ee9ca7, #ec4357);
-  /* z-index: 99; */
-}
+  z-index: 129;
+} */
 
 #intro .intro-left {
   display: inline-block;
@@ -786,7 +822,7 @@ export default {
 }
 
 .section-2 .row .col-md-6 .gambar img {
-  margin-top: 150px;
+  /* margin-top: 150px; */
   opacity: 0.8;
   width: 80%;
 }
@@ -1048,7 +1084,7 @@ export default {
   }
 }
 
-@media (min-width: 1099px) and (max-width: 1199px) {
+@media (min-width: 1100px) and (max-width: 1199px) {
   #intro .bottom-left-gradient {
     display: none;
   }
@@ -1084,6 +1120,7 @@ export default {
   #intro-top {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    place-items: center;
   }
 
   #intro {
