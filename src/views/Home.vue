@@ -1,10 +1,10 @@
 <template>
-  <div class="mx-auto w-100 ">
+  <div class="wrapper mx-auto w-100">
     <!-- <div class="top-right-gradient"></div> -->
     <section id="intro">
       <div id="intro-top" class="wrapper grid place-items-center">
         <div
-          class="intro-left "
+          class="intro-left"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-duration="1250"
@@ -37,9 +37,9 @@
 
     <!-- Content Start -->
 
-    <main id="content" class="px-5">
+    <main id="content" class="">
       <section class="section-1">
-        <div class="wrapper text-center">
+        <div class="text-center">
           <h1
             class="heading"
             data-aos="zoom-out-up"
@@ -549,14 +549,13 @@ export default {
   z-index: 1;
 }
 
-.pendidikan-img{
-  max-width: 400px
+.pendidikan-img {
+  max-width: 400px;
 }
 
-#intro .intro-right{
-  order: 0
+#intro .intro-right {
+  order: 0;
 }
-
 </style>
 
 <style scoped>
@@ -611,7 +610,7 @@ export default {
   position: relative;
   overflow: hidden;
   min-height: 660px;
-  padding-top: 120px
+  padding-top: 120px;
 }
 
 .top-right-gradient {
@@ -622,7 +621,7 @@ export default {
   height: 800px;
   border-radius: 50%;
   background: linear-gradient(#ee9ca7, #ec4357);
-  z-index: 99;
+  /* z-index: 99; */
 }
 
 #intro .intro-left {
@@ -681,15 +680,16 @@ export default {
 
 #intro .intro-right {
   position: relative;
-  display: inline-block;
-  margin-left: 5.9em;
-  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  /* margin-left: 5.9em; */
+  /* padding-top: 80px; */
   z-index: 100;
 }
 
 #intro .intro-right img {
   /* margin-top: -380px; */
-  max-width: 600px;
+  width: 100%;
 }
 
 #intro .bottom-left-gradient {
@@ -849,6 +849,12 @@ export default {
   margin-top: -75px;
   font-family: Roboto, sans-serif;
   background-color: #18191c;
+}
+
+.imagee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagee img {
@@ -1036,7 +1042,7 @@ export default {
     display: none;
   }
 
-  #intro #intro-top{
+  #intro #intro-top {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -1045,6 +1051,11 @@ export default {
 @media (min-width: 1099px) and (max-width: 1199px) {
   #intro .bottom-left-gradient {
     display: none;
+  }
+
+  #intro #intro-top {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .section-1 .row .col-md-6 .gambar img {
@@ -1064,8 +1075,13 @@ export default {
 }
 
 @media (min-width: 641px) and (max-width: 1099px) {
+  #intro .intro-right {
+    margin-left: 0;
+    order: -1;
+  }
+
   /* intro responsive */
-  #intro-top{
+  #intro-top {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1095,7 +1111,7 @@ export default {
     border-radius: 50%;
   } */
 
-   .top-right-gradient {
+  .top-right-gradient {
     position: absolute;
     /* z-index: -1; */
     top: 5%;
@@ -1122,7 +1138,7 @@ export default {
     margin-bottom: 10px;
   }
 
-/* intro-left margin-left */
+  /* intro-left margin-left */
   .intro-left {
     /* margin-left: 100px; */
   }
@@ -1164,30 +1180,23 @@ export default {
 @media (min-width: 320px) and (max-width: 641px) {
   /* intro responsive */
 
+  #intro .intro-right {
+    margin-left: 0;
+    order: -1;
+  }
   #intro {
-    /* padding-top: 15em; */
-    /* max-height: 1000px !important;x */
     text-align: center;
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-around;
-    /* z-index: -9; */
   }
 
   #intro .bottom-left-gradient {
     display: none;
   }
-  /* #intro .bottom-left-gradient {
-    position: absolute;
-    z-index: -1;
-    top: 85%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  } */
 
-   .top-right-gradient {
+  .top-right-gradient {
     position: absolute;
     /* z-index: -1; */
     top: -5%;
@@ -1195,12 +1204,6 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-  }
-
-  #intro .intro-right img {
-    margin-left: -95px;
-    margin-top: -80px;
-    width: 310px;
   }
 
   #intro h1 {

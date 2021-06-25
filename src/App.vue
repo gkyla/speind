@@ -33,8 +33,9 @@ export default {
 
 .wrapper {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .fade-enter-active,
@@ -62,17 +63,24 @@ body,
 html {
   background-color: #18191c;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
+  /* overflow-x: hidden; */
   /* min-height: 100vh; */
   /* min-width: 100vw; */
+  /* overflow-x: hidden; */
 }
 
 #app {
   -webkit-font-smoothing: antialiased;
+  position: relative;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   color: white;
+  /* overflow-x: hidden; */
 }
 
 .bg-speind-dark {
