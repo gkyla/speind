@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto w-100 ">
-    <div class="top-right-gradient"></div>
+    <!-- <div class="top-right-gradient"></div> -->
     <section id="intro">
       <div id="intro-top" class="wrapper grid place-items-center">
         <div
@@ -30,7 +30,7 @@
           />
         </div>
       </div>
-      <div class="bottom-left-gradient"></div>
+      <!-- <div class="bottom-left-gradient"></div> -->
     </section>
 
     <!-- Intro Page END -->
@@ -1257,7 +1257,7 @@ export default {
   }
   .section-2 .row .col-md-6 .gambar img {
     padding-top: 45px;
-    width: 63%;
+    /* width: 63%; */
   }
 }
 

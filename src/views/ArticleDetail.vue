@@ -4,7 +4,7 @@
       <div class="grid-article-detail mx-4">
         <div id="card-detail-article" class="flex flex-col">
           <img
-            src="../assets/article/tkj2.jpeg"
+            src="img/article/tkj2.jpeg"
             class="rounded-md img-article"
             data-aos="fade-right"
             data-aos-delay="50"
@@ -31,7 +31,7 @@
             <div class="grid gap-3">
               <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
                 <img
-                  src="../assets/article/tkj2.jpeg"
+                  src="img/assets/article/tkj2.jpeg"
                   class="rounded-md"
                   alt="article"
                 />
@@ -43,7 +43,7 @@
               </div>
               <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
                 <img
-                  src="../assets/article/tkj2.jpeg"
+                  src="img/assets/article/tkj2.jpeg"
                   class="rounded-md"
                   alt="article"
                 />
@@ -55,7 +55,7 @@
               </div>
               <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
                 <img
-                  src="../assets/article/tkj2.jpeg"
+                  src="img/assets/article/tkj2.jpeg"
                   class="rounded-md"
                   alt="article"
                 />
@@ -94,7 +94,7 @@
           <div id="article-lainnya-card-bottom" class="gap-3">
             <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
               <img
-                src="../assets/article/tkj.jpeg"
+                src="img/assets/article/tkj.jpeg"
                 class="rounded-md"
                 alt="article"
               />
@@ -102,7 +102,7 @@
             </div>
             <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
               <img
-                src="../assets/article/tkj.jpeg"
+                src="img/assets/article/tkj.jpeg"
                 class="rounded-md"
                 alt="article"
               />
@@ -110,7 +110,7 @@
             </div>
             <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
               <img
-                src="../assets/article/tkj.jpeg"
+                src="img/assets/article/tkj.jpeg"
                 class="rounded-md"
                 alt="article"
               />
@@ -128,13 +128,19 @@ export default {
   data() {
     return {
       description: '',
+      articleObj: null,
     };
   },
   methods: {
     async getDetail() {
-      const res = await fetch(`/data/template/${this.$route.params.id}.html`);
-      const data = await res.text();
-      this.description = data;
+      const res = await fetch('/data/article.json');
+      const data = await res.json();
+      this.getArticleObj(data.allArticles);
+      // this.description = data;
+    },
+    getArticleObj(data) {
+      const article = data.find((arc) => arc.id === this.$route.params.id);
+      this.articleObj = article;
     },
   },
   created() {

@@ -1,10 +1,42 @@
 {
-   "article": [
+   "topArticles": [
       {
-         "id": "1",
+         "id": "alasan-mengapa-kamu-harus-masuk-smk",
          "name": "5 Alasan Mengapa Kamu Harus Masuk SMK",
+         "htmlTemplate": "/data/template/alasan-mengapa-kamu-harus-masuk-smk.html",
+         "picture": "img/article/tkj2.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "W",
          "htmlTemplate": "/data/template/1.html",
-         "picture": "../src/assets/article/tkj2.jpeg  "
+         "picture": "img/article/tkj2.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "W",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "img/article/tkj2.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "W",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "img/article/tkj2.jpeg"
+      }
+   ],
+   "allArticles": [
+      {
+         "id": "alasan-mengapa-kamu-harus-masuk-smk",
+         "name": "5 Alasan Mengapa Kamu Harus Masuk SMK",
+         "htmlTemplate": "/data/template/alasan-mengapa-kamu-harus-masuk-smk.html",
+         "picture": "img/article/tkj2.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "W",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "img/article/tkj2.jpeg"
       }
    ]
 }

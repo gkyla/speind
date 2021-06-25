@@ -5,83 +5,26 @@
     <div class="wrapper mx-auto mt-5 px-2">
       <div class="grid-week">
         <div
-          class="box box1"
+          v-for="(article,index) in topArticles" :key="article.id"
+          :class="['box', `box${index + 1}`]"
           data-aos="fade-right"
           data-aos-delay="50"
           data-aos-duration="1250"
         >
           <img
             class="rounded-sm"
-            src="../assets/article/tkj.jpeg"
-            alt=" Restaurant"
+            :src="article.picture"
+            :alt="article.name"
           />
           <div class="panel">
-            <router-link to="/article/1" class="panel-link"
-              >5 Alasan Mengapa Kamu Harus Masuk SMK</router-link
-            >
-          </div>
-        </div>
-        <div
-          class="box box2"
-          data-aos="fade-left"
-          data-aos-delay="50"
-          data-aos-duration="1250"
-        >
-          <img
-            class="rounded-sm"
-            src="../assets/about/placeholder.jpg"
-            alt=" Restaurant"
-          />
-          <div class="panel">
-            <router-link to="/article/2" class="panel-link"
-              >Lorem ipsum dolor sit amet.</router-link
-            >
-          </div>
-        </div>
-        <div
-          class="box box3"
-          data-aos="fade-left"
-          data-aos-delay="50"
-          data-aos-duration="1250"
-        >
-          <img
-            class="rounded-sm"
-            src="../assets/about/placeholder.jpg"
-            alt=" Restaurant"
-          />
-          <div class="panel">
-            <router-link to="/article/3" class="panel-link"
-              >Lorem ipsum dolor sit amet.</router-link
-            >
-          </div>
-        </div>
-        <div
-          class="box box4"
-          data-aos="fade-left"
-          data-aos-delay="50"
-          data-aos-duration="1250"
-        >
-          <img
-            class="rounded-md"
-            src="../assets/about/placeholder.jpg"
-            alt=" Restaurant"
-          />
-          <div class="panel">
-            <router-link to="/" class="panel-link"
-              >Lorem ipsum dolor sit amet.</router-link
+            <router-link :to="`/article/${article.id}`" class="panel-link"
+              >{{article.name}}</router-link
             >
           </div>
         </div>
       </div>
     </div>
-    <div v-if="articles">
-      asas
-      <div v-for="article in articles" :key="article.id">
-        {{ article }}
-        <img :src="article.picture" alt="" />
-        <p>{{ article.id }}</p>
-      </div>
-    </div>
+
   </div>
 </template>
 
@@ -92,14 +35,14 @@ export default {
   data() {
     return {
       htmlTemplate: null,
-      articles: null,
+      topArticles: null,
     };
   },
   methods: {
     async getData() {
       const res = await fetch('/data/article.json');
       const data = await res.json();
-      this.articles = data.article;
+      this.topArticles = data.topArticles;
     },
   },
   mounted() {
