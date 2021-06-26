@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper mx-auto w-screen" id="home-body">
-    <img class="blob1" src="../assets/patterns/blob1.svg" />
-    <img class="blob3" src="../assets/patterns/blob3.svg" />
+  <div class="wrapper mx-auto" id="home-body">
+    <!-- <img class="blob1" src="../assets/patterns/blob1.svg" />
+    <img class="blob3" src="../assets/patterns/blob3.svg" /> -->
     <!-- <img class="blob3" src="../assets/patterns/blob3.svg" /> -->
     <section id="intro">
       <div id="intro-top" class="wrapper grid">
@@ -43,7 +43,7 @@
       <section class="section-1">
         <div class="text-center aos-area">
           <h1
-            class="heading"
+            class="heading relative z-20"
             data-aos="zoom-out-up"
             data-aos-delay="50"
             data-aos-duration="1000"
@@ -56,12 +56,12 @@
             data-aos-delay="50"
             data-aos-duration="1000"
             src="../assets/images/undraw_book_lover_mkck.svg"
-            class="pendidikan-img mx-auto mb-4"
+            class="pendidikan-img mx-auto mb-4 relative z-20"
             alt="image"
           />
 
           <p
-            class="desksejarah"
+            class="desksejarah relative z-20"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-duration="1000"
@@ -113,6 +113,7 @@
                   Indonesia diapit oleh dua benua yaitu Benua Asia dan Australia
                   serta dua samudra yaitu Samudra Hindia dan Pasifik.
                 </p>
+                <br />
                 <p>
                   Indonesia terkenal dengan sumber daya alam (SDA) yang melimpah
                   ruah di setiap wilayahnya. Oleh sebab itu, pada zaman dahulu
@@ -141,17 +142,16 @@
               >
                 <h1>Smk Masa Kini Dan Yang Akan Datang</h1>
                 <p class="pt-4">
-                  pemerintah telah menyediakan platform dengan visi ke depan,
-                  semisal penyelenggaraan pendidikan SMK selama 4,5 yang
-                  menghasilkan D2. “Jangan pernah takut bermimpi. Ada banyak
-                  terobosaan yang kami buat sampai level ‘menikah’. Kurikulum
-                  berbasis project, serta kepala sekolah akan menjadi penggerak”
-                  terang Wikan (Direktur Jenderal Pendidikan Vokasi Kementerian
-                  Pendidikan dan Kebudayaan).
+                  Pendidikan di Indonesia berawal dari pendidikan berbasis
+                  keagamaan yang di selenggarakan oleh para pemuka dan penyebar
+                  agama Hindu, Budha, dan Islam. Pada zamannya, mereka telah
+                  mengembangkan sistem pendidikan yang relatif terstruktur dari
+                  segi isi maupun tingkatannya.
                 </p>
+                <br />
                 <p>
-                  “Tanpa passion yang kuat, tidak akan menghasilkan SDM unggul
-                  yang kompeten”.
+                  Namun sistem pendidikan dalam bentuk sekolah atau menyerupai
+                  sekolah baru dimulai pada abad ke-16...
                 </p>
                 <a href="#content" class="intro-cta"> Baca Selengkapnya </a>
               </div>
@@ -552,6 +552,7 @@ export default {
 }
 
 .pendidikan-img {
+  width: 100%;
   max-width: 400px;
 }
 
@@ -562,7 +563,7 @@ export default {
 
 <style scoped>
 .blob1 {
-  width: 400px;
+  width: 300px;
   position: absolute;
   top: 100px;
   right: -80px;
@@ -579,7 +580,7 @@ export default {
 
 @media (max-width: 1366px) {
   .blob1 {
-    width: 40vw;
+    /* width: 40vw; */
     position: absolute;
     top: 100px;
     right: -160px;
@@ -587,7 +588,7 @@ export default {
   }
 
   .blob3 {
-    width: 40vw;
+    /* width: 40vw; */
     position: absolute;
     top: 700px;
     left: -20%;
@@ -595,27 +596,43 @@ export default {
   }
 }
 
-@media (max-width: 670px){
+@media (max-width: 670px) {
   .blob3 {
-  /* width: 400px; */
-  /* position: absolute; */
-  top: 750px;
-  /* left: -250px;
+    /* width: 400px; */
+    /* position: absolute; */
+    top: 750px;
+    /* left: -250px;
   z-index: 99; */
+  }
 }
 
-}
-
-
-@media (max-width: 650px){
+@media (max-width: 650px) {
   .blob3 {
-  /* width: 200px; */
-  /* position: absolute; */
-  top: 850px;
-  /* left: -120px; */
-  /* z-index: 99; */
+    /* width: 200px; */
+    /* position: absolute; */
+    top: 850px;
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
 }
 
+@media (max-width: 540px) {
+  .blob3 {
+    /* width: 200px; */
+    /* position: absolute; */
+    /* top: 850px; */
+    display: none;
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
+  .blob1 {
+    display: none;
+    /* width: 200px; */
+    /* position: absolute; */
+    /* top: 850px; */
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
 }
 </style>
 
@@ -623,34 +640,13 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
 .heading {
-  margin: 2rem;
-  padding-top: 6rem;
-  display: inline-block;
+  /* margin: 2rem; */
+  /* padding-top: 6rem; */
+  /* display: inline-block; */
   /* font-size: 3.5rem; */
-  color: #fff;
-  position: relative;
-  letter-spacing: 0.2rem;
-}
-
-.heading::before,
-.heading::after {
-  content: "";
-  position: absolute;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-top: 0.4rem solid #ec4357;
-  border-left: 0.4rem solid white;
-}
-
-.heading::before {
-  top: 5.8rem;
-  left: -2rem;
-}
-
-.heading::after {
-  bottom: -0.5rem;
-  right: -2rem;
-  transform: rotate(180deg);
+  /* color: #fff; */
+  /* position: relative; */
+  /* letter-spacing: 0.2rem; */
 }
 
 /* .wrapper {

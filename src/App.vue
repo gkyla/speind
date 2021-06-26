@@ -6,6 +6,10 @@
     </transition>
   </router-view>
   <Footer />
+
+  <img class="blob1" src="./assets/patterns/blob1.svg" />
+  <img class="blob2" src="./assets/patterns/blob2.svg" />
+  <img class="blob3" src="./assets/patterns/blob3.svg" />
 </template>
 
 <script>
@@ -39,11 +43,91 @@ export default {
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
+.blob1 {
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  right: -120px;
+  z-index: 10;
+}
+
+.blob2 {
+  width: 400px;
+  position: absolute;
+  top: 650px;
+  left: -190px;
+  z-index: 10;
+}
+
+.blob3 {
+  width: 400px;
+  position: absolute;
+  top: 850px;
+  right: -190px;
+  z-index: 10;
+}
+
+@media (max-width: 1366px) {
+  .blob1 {
+    /* width: 40vw; */
+    position: absolute;
+    top: 100px;
+    right: -160px;
+    /* z-index: 998; */
+  }
+
+  .blob2 {
+    /* width: 40vw; */
+    position: absolute;
+    top: 700px;
+    left: -270px;
+  }
+}
+
+@media (max-width: 670px) {
+  .blob2 {
+    /* width: 400px; */
+    /* position: absolute; */
+    top: 750px;
+    left: -270px;
+    /* z-index: 99; */
+  }
+}
+
+@media (max-width: 650px) {
+  .blob2 {
+    /* width: 200px; */
+    /* position: absolute; */
+    top: 850px;
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
+}
+
+@media (max-width: 540px) {
+  .blob2 {
+    /* width: 200px; */
+    /* position: absolute; */
+    /* top: 850px; */
+    display: none;
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
+  .blob1 {
+    display: none;
+    /* width: 200px; */
+    /* position: absolute; */
+    /* top: 850px; */
+    /* left: -120px; */
+    /* z-index: 99; */
+  }
+}
+
 .wrapper {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 10px;
 }
 
 .fade-enter-active,
@@ -65,6 +149,7 @@ export default {
   text-transform: capitalize;
   text-decoration: none;
   scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
 
 body,
@@ -75,9 +160,9 @@ html {
   /* overflow-x: hidden; */
   /* min-height: 100vh; */
   /* min-width: 100vw; */
-  /* overflow-x: hidden; */
   overflow-x: hidden;
-  width: 100vw;
+  /* overflow: hidden; */
+  /* width: 100vw; */
 }
 
 #app {
@@ -89,6 +174,7 @@ html {
   width: 100%;
   min-height: 100vh;
   /* min-width: 100vw; */
+  overflow-x: hidden;
   color: white;
 }
 
@@ -110,7 +196,7 @@ html {
 }
 
 .heading {
-  margin: 2rem;
+  /* margin: 2rem; */
   padding-top: 6rem;
   display: inline-block;
   font-size: 2.5rem;

@@ -1,18 +1,18 @@
 <template>
-  <div class="min-h-screen bg-speind-black h-100 pt-40 my-10">
+  <div class="min-h-screen bg-speind-black h-full pt-20 my-10">
     <div class="wrapper mx-auto">
       <div class="grid-article-detail mx-4" v-if="articleObj">
         <div id="card-detail-article" class="flex flex-col">
           <img
             :src="articleObj.picture"
-            class="rounded-md img-article"
+            class="rounded-md img-article relative z-20"
             data-aos="fade-right"
             data-aos-delay="50"
             data-aos-duration="1250"
           />
           <div>
             <h1 class="text-left text-2xl mt-3">
-              {{articleObj.name}}
+              {{ articleObj.name }}
             </h1>
             <!-- <div class="bg-speind-red w-10 h-1 mt-4"></div> -->
             <div class="flex gap-2 my-5">
@@ -24,23 +24,35 @@
               >
             </div>
           </div>
-          <div id="article-lainnya-top" class="mt-5">
-            <h2 class="text-left text-2xl my-2">Article lain nya</h2>
+          <div id="article-lainnya-top" class="mt-5 s">
+            <h2 class="text-left text-2xl my-2 sticky top-0">
+              Article lain nya
+            </h2>
             <!-- <div class="bg-speind-red w-10 h-1 my-4"></div> -->
 
             <div class="grid gap-3">
-              <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md"
-                v-for="article in anotherArticle" :key="article.id"
+              <div
+                class="
+                  grid
+                  gap-5
+                  grid-cols-2
+                  bg-speind-gray
+                  text-white
+                  p-2
+                  rounded-md
+                "
+                v-for="article in anotherArticle"
+                :key="article.id"
               >
                 <img
                   :src="article.picture"
-                  class="rounded-md"
+                  class="rounded-md another-article-img"
                   alt="article"
                 />
                 <h1 class="text-left text-lg">
-                  <router-link :to="`/article/${article.id}`"
-                    >{{article.name}}</router-link
-                  >
+                  <router-link :to="`/article/${article.id}`">{{
+                    article.name
+                  }}</router-link>
                 </h1>
               </div>
             </div>
@@ -48,13 +60,21 @@
         </div>
 
         <div
-          class="text-left bg-speind-gray rounded-md text-speind-white p-4"
+          class="
+            text-left
+            bg-speind-gray
+            rounded-md
+            text-speind-white
+            p-4
+            relative
+            z-20
+          "
           data-aos="fade-left"
           data-aos-delay="50"
           data-aos-duration="1250"
         >
           <h1 class="text-left text-2xl mt-3">
-            {{articleObj.name}}
+            {{ articleObj.name }}
           </h1>
           <div class="bg-speind-red w-10 h-1 my-4"></div>
 
@@ -72,18 +92,19 @@
           <div id="article-lainnya-card-bottom" class="gap-3">
             <div
               class="grid gap-5 bg-speind-gray p-2 rounded-md"
-              v-for="article in anotherArticle" :key="article.id"
+              v-for="article in anotherArticle"
+              :key="article.id"
             >
               <img
-                  :src="article.picture"
-                  class="rounded-md"
-                  alt="article"
-                />
-                <h1 class="text-left text-lg">
-                  <router-link :to="`/article/${article.id}`"
-                    >{{article.name}}</router-link
-                  >
-                </h1>
+                :src="article.picture"
+                class="rounded-md another-article-img-mobile"
+                alt="article"
+              />
+              <h1 class="text-left text-lg">
+                <router-link :to="`/article/${article.id}`">{{
+                  article.name
+                }}</router-link>
+              </h1>
             </div>
           </div>
         </div>
@@ -118,13 +139,10 @@ export default {
       // description
       const description = await fetch(this.articleObj.htmlTemplate);
       this.description = await description.text();
-
-      console.log(this.articleObj);
     },
     async getAnotherArticle() {
       const anotherArticle = this.allArticles.filter((arc, index) => arc.id !== this.$route.params.id && index < 4);
       this.anotherArticle = anotherArticle;
-      console.log(anotherArticle);
     },
   },
   mounted() {
@@ -145,7 +163,21 @@ export default {
 
 .img-article {
   width: 100%;
-  height: 450px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.another-article-img-mobile {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.another-article-img {
+  height: 100px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -178,6 +210,10 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+  .img-article {
+    height: 390px;
+  }
+
   #article-lainnya-card-bottom {
     grid-template-columns: repeat(3, 1fr);
   }

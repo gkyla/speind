@@ -54,7 +54,7 @@
         id="card-description"
         class="bg-speind-gray py-3 px-4 text-left rounded-2xl"
       >
-        <h1 class="lg:text-2xl xl:text-3xl">{{ name }}</h1>
+        <h1 class="text-2xl">{{ name }}</h1>
 
         <div>
           <slot name="description"></slot>
@@ -121,9 +121,16 @@ export default {
 }
 
 #card-ribbon #profile-picture {
-  height: 250px;
+  height: 230px;
   object-fit: cover;
   border-radius: 15px;
+}
+
+@media screen (min-width: 900px) {
+  #card-ribbon #profile-picture {
+    height: 250px;
+    object-fit: cover;
+  }
 }
 
 @media screen (min-width: 1200px) {

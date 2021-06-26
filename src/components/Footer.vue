@@ -2,16 +2,20 @@
   <footer>
     <div class="wrapper footer-grid">
       <div class="footer-left">
-        <a href="#home">
-          <img src="images/logo.png" alt="logospeind" />
-        </a>
+        <router-link to="/">
+          <img
+            src="../assets/images/logo.png"
+            class="mx-auto"
+            alt="logospeind"
+          />
+        </router-link>
 
         <p class="footer-links">
-          <a id="from-left" href="#home">HOME</a>
-          <a href="sejarah.html">SEJARAH</a>
-          <a href="article.html">ARTICLE</a>
-          <a href="aboutus.html">ABOUT US</a>
-          <a href="faq.html">FAQ</a>
+          <router-link id="from-left" to="/">HOME</router-link>
+          <router-link to="/sejarah">SEJARAH</router-link>
+          <router-link to="/article">ARTICLE</router-link>
+          <router-link to="/about">ABOUT US</router-link>
+          <router-link to="/faq">FAQ</router-link>
         </p>
 
         <p class="footer-company-name">&copy; 2021 - <span>SPEIND</span></p>
@@ -25,7 +29,7 @@
 
         <div>
           <i class="fas fa-phone"></i>
-          <p><span> +62 -</span></p>
+          <p><span> +62 1234-5678-10</span></p>
         </div>
 
         <div>
@@ -231,6 +235,38 @@ footer .footer-icons a:hover {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+  }
+
+  footer .footer-left,
+  footer .footer-center,
+  footer .footer-right {
+    text-align: center;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-center i {
+    display: none;
+  }
+
+  .footer-connect {
+    display: none;
+  }
+
+  .footer-center > div > span {
+    display: block;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
 </style>

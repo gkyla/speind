@@ -38,8 +38,9 @@
           </CardAbout>
           <CardAbout
             name="Steven Christian"
-            imgSrc="https://unsplash.com/photos/-C-jTjc0g7I/download?force=true&w=640"
+            :imgSrc="require('../assets/images/steven.jpeg')"
             imgPosition="top"
+            ig="https://www.instagram.com/steven_christian20"
           >
             <template #description>
               <p class="my-2 text-sm">Majoring in Software Engineering</p>

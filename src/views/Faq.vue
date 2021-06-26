@@ -1,100 +1,103 @@
 <template>
-  <section id="faq" class="faq">
-    <h1 class="heading">FAQ</h1>
+  <div class="wrapper">
+    <section id="faq" class="faq">
+      <h1 class="heading">FAQ</h1>
 
-    <div class="row">
-      <div class="image">
-        <img src="../assets/faq/Questions-pana.png" alt="Question" />
+      <div class="row">
+        <div class="image">
+          <img src="../assets/faq/Questions-pana.png" alt="Question" />
+        </div>
+
+        <div class="accordion-container">
+          <div class="accordion">
+            <div class="accordion-header">
+              <span>+</span>
+              <h3>Apasih Pendidikan di Indonesia?</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Pendidikan di Indonesia adalah seluruh pendidikan yang
+                diselenggarakan di Indonesia, baik itu secara terstruktur maupun
+                tidak terstruktur. Secara terstruktur, pendidikan di Indonesia
+                menjadi tanggung jawab Kementerian Pendidikan dan Kebudayaan
+                Republik Indonesia (Kemdikbud), dahulu bernama Departemen
+                Pendidikan Nasional Republik Indonesia (Depdiknas). Di
+                Indonesia, semua penduduk wajib mengikuti program wajib belajar
+                pendidikan dasar selama sembilan tahun, enam tahun di sekolah
+                dasar dan tiga tahun di sekolah menengah pertama. Saat ini,
+                pendidikan di Indonesia diatur melalui Undang-Undang Nomor 20
+                Tahun 2003 tentang Sistem Pendidikan Nasional. <br /><br />
+                Pendidikan di Indonesia terbagi ke dalam tiga jalur utama, yaitu
+                formal, nonformal, dan informal. Pendidikan juga dibagi ke dalam
+                empat jenjang, yaitu anak usia dini, dasar, menengah, dan
+                tinggi.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span>+</span>
+              <h3>Lorem ipsum dolor sit amet?</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                atque possimus ipsum quae error ullam reiciendis in iste maiores
+                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
+                magnam sunt deleniti!
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span>+</span>
+              <h3>Lorem ipsum dolor sit amet?</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                atque possimus ipsum quae error ullam reiciendis in iste maiores
+                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
+                magnam sunt deleniti!
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span>+</span>
+              <h3>Lorem ipsum dolor sit amet?</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                atque possimus ipsum quae error ullam reiciendis in iste maiores
+                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
+                magnam sunt deleniti!
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span>+</span>
+              <h3>Lorem ipsum dolor sit amet?</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+                atque possimus ipsum quae error ullam reiciendis in iste maiores
+                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
+                magnam sunt deleniti!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="accordion-container">
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>+</span>
-            <h3>Apasih Pendidikan di Indonesia?</h3>
-          </div>
-          <div class="accordion-body">
-            <p>
-              Pendidikan di Indonesia adalah seluruh pendidikan yang
-              diselenggarakan di Indonesia, baik itu secara terstruktur maupun
-              tidak terstruktur. Secara terstruktur, pendidikan di Indonesia
-              menjadi tanggung jawab Kementerian Pendidikan dan Kebudayaan
-              Republik Indonesia (Kemdikbud), dahulu bernama Departemen
-              Pendidikan Nasional Republik Indonesia (Depdiknas). Di Indonesia,
-              semua penduduk wajib mengikuti program wajib belajar pendidikan
-              dasar selama sembilan tahun, enam tahun di sekolah dasar dan tiga
-              tahun di sekolah menengah pertama. Saat ini, pendidikan di
-              Indonesia diatur melalui Undang-Undang Nomor 20 Tahun 2003 tentang
-              Sistem Pendidikan Nasional. <br /><br />
-              Pendidikan di Indonesia terbagi ke dalam tiga jalur utama, yaitu
-              formal, nonformal, dan informal. Pendidikan juga dibagi ke dalam
-              empat jenjang, yaitu anak usia dini, dasar, menengah, dan tinggi.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>+</span>
-            <h3>Lorem ipsum dolor sit amet?</h3>
-          </div>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-              atque possimus ipsum quae error ullam reiciendis in iste maiores
-              nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-              magnam sunt deleniti!
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>+</span>
-            <h3>Lorem ipsum dolor sit amet?</h3>
-          </div>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-              atque possimus ipsum quae error ullam reiciendis in iste maiores
-              nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-              magnam sunt deleniti!
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>+</span>
-            <h3>Lorem ipsum dolor sit amet?</h3>
-          </div>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-              atque possimus ipsum quae error ullam reiciendis in iste maiores
-              nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-              magnam sunt deleniti!
-            </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>+</span>
-            <h3>Lorem ipsum dolor sit amet?</h3>
-          </div>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-              atque possimus ipsum quae error ullam reiciendis in iste maiores
-              nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-              magnam sunt deleniti!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
