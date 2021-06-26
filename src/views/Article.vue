@@ -3,7 +3,7 @@
     <h1 class="heading">ARTICLE</h1>
 
     <div class="wrapper mx-auto mt-5 px-2">
-      <div class="grid-week">
+      <div class="grid-week" v-if="topArticles">
         <div
           v-for="(article,index) in topArticles" :key="article.id"
           :class="['box', `box${index + 1}`]"
@@ -24,29 +24,36 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 // https://majalahsunday.com/lebih-baik-masuk-sma-atau-smk-ketahui-7-hal-ini-sebelum-memilih/
 
 export default {
   data() {
     return {
       htmlTemplate: null,
-      topArticles: null,
+      // topArticles: null,
     };
   },
   methods: {
-    async getData() {
-      const res = await fetch('/data/article.json');
-      const data = await res.json();
-      this.topArticles = data.topArticles;
-    },
+    // async getData() {
+    // const res = await fetch('/data/article.json');
+    // const data = await res.json();
+    // this.topArticles = data.topArticles;
+    // },
+  },
+  computed: {
+    ...mapGetters([
+      'allArticles',
+      'topArticles',
+    ]),
   },
   mounted() {
-    this.getData();
+    // this.getData();
+    // console.log(this.allArticles);
   },
 };
 </script>
@@ -57,7 +64,7 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-auto-rows: 200px;
-  gap: 10px;
+  gap: 13px;
   position: relative;
 }
 

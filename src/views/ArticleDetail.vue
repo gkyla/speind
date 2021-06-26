@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen bg-speind-black h-100 pt-40 my-10">
-    <div class="container mx-auto">
-      <div class="grid-article-detail mx-4">
+    <div class="wrapper mx-auto">
+      <div class="grid-article-detail mx-4" v-if="articleObj">
         <div id="card-detail-article" class="flex flex-col">
           <img
-            src="img/article/tkj2.jpeg"
+            :src="articleObj.picture"
             class="rounded-md img-article"
             data-aos="fade-right"
             data-aos-delay="50"
@@ -12,7 +12,7 @@
           />
           <div>
             <h1 class="text-left text-2xl mt-3">
-              Lebih baik masuk SMK atau SMA ?
+              {{articleObj.name}}
             </h1>
             <!-- <div class="bg-speind-red w-10 h-1 mt-4"></div> -->
             <div class="flex gap-2 my-5">
@@ -29,39 +29,17 @@
             <!-- <div class="bg-speind-red w-10 h-1 my-4"></div> -->
 
             <div class="grid gap-3">
-              <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
+              <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md"
+                v-for="article in anotherArticle" :key="article.id"
+              >
                 <img
-                  src="img/assets/article/tkj2.jpeg"
+                  :src="article.picture"
                   class="rounded-md"
                   alt="article"
                 />
                 <h1 class="text-left text-lg">
-                  <router-link to="/"
-                    >Lebih baik masuk SMK atau SMA ?</router-link
-                  >
-                </h1>
-              </div>
-              <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
-                <img
-                  src="img/assets/article/tkj2.jpeg"
-                  class="rounded-md"
-                  alt="article"
-                />
-                <h1 class="text-left text-lg">
-                  <router-link to="/"
-                    >Lebih baik masuk SMK atau SMA ?</router-link
-                  >
-                </h1>
-              </div>
-              <div class="grid gap-5 grid-cols-2 bg-speind-gray p-2 rounded-md">
-                <img
-                  src="img/assets/article/tkj2.jpeg"
-                  class="rounded-md"
-                  alt="article"
-                />
-                <h1 class="text-left text-lg">
-                  <router-link to="/"
-                    >Lebih baik masuk SMK atau SMA ?</router-link
+                  <router-link :to="`/article/${article.id}`"
+                    >{{article.name}}</router-link
                   >
                 </h1>
               </div>
@@ -76,7 +54,7 @@
           data-aos-duration="1250"
         >
           <h1 class="text-left text-2xl mt-3">
-            Lebih baik masuk SMK atau SMA ?
+            {{articleObj.name}}
           </h1>
           <div class="bg-speind-red w-10 h-1 my-4"></div>
 
@@ -92,29 +70,20 @@
           <div class="bg-speind-red w-10 h-1 my-4"></div>
 
           <div id="article-lainnya-card-bottom" class="gap-3">
-            <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
+            <div
+              class="grid gap-5 bg-speind-gray p-2 rounded-md"
+              v-for="article in anotherArticle" :key="article.id"
+            >
               <img
-                src="img/assets/article/tkj.jpeg"
-                class="rounded-md"
-                alt="article"
-              />
-              <h1 class="text-left text-lg">Lebih baik masuk SMK atau SMA ?</h1>
-            </div>
-            <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
-              <img
-                src="img/assets/article/tkj.jpeg"
-                class="rounded-md"
-                alt="article"
-              />
-              <h1 class="text-left text-lg">Lebih baik masuk SMK atau SMA ?</h1>
-            </div>
-            <div class="grid gap-5 bg-speind-gray p-2 rounded-md">
-              <img
-                src="img/assets/article/tkj.jpeg"
-                class="rounded-md"
-                alt="article"
-              />
-              <h1 class="text-left text-lg">Lebih baik masuk SMK atau SMA ?</h1>
+                  :src="article.picture"
+                  class="rounded-md"
+                  alt="article"
+                />
+                <h1 class="text-left text-lg">
+                  <router-link :to="`/article/${article.id}`"
+                    >{{article.name}}</router-link
+                  >
+                </h1>
             </div>
           </div>
         </div>
@@ -124,27 +93,45 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   data() {
     return {
       description: '',
       articleObj: null,
+      anotherArticle: null,
     };
   },
+  computed: {
+    ...mapGetters([
+      'allArticles',
+      'currentDetail',
+    ]),
+  },
   methods: {
-    async getDetail() {
-      const res = await fetch('/data/article.json');
-      const data = await res.json();
-      this.getArticleObj(data.allArticles);
-      // this.description = data;
+    async getDetailObj() {
+      const arr = this.allArticles;
+      const currentObj = arr.find((arc) => arc.id === this.$route.params.id);
+      this.articleObj = currentObj;
+
+      // description
+      const description = await fetch(this.articleObj.htmlTemplate);
+      this.description = await description.text();
+
+      console.log(this.articleObj);
     },
-    getArticleObj(data) {
-      const article = data.find((arc) => arc.id === this.$route.params.id);
-      this.articleObj = article;
+    async getAnotherArticle() {
+      const anotherArticle = this.allArticles.filter((arc, index) => arc.id !== this.$route.params.id && index < 4);
+      this.anotherArticle = anotherArticle;
+      console.log(anotherArticle);
     },
   },
-  created() {
-    this.getDetail();
+  mounted() {
+    // this.$store.dispatch('getDetail');
+    // this.articleObj = this.currentDetail;
+    this.getDetailObj();
+    this.getAnotherArticle();
   },
 };
 </script>

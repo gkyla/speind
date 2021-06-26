@@ -13,6 +13,7 @@ module.exports = {
     "linebreak-style": "off",
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "max-len": "off",
-    "no-multiple-empty-lines": "off"
+    "no-multiple-empty-lines": "off",
+    'vue/comment-directive' : 'off'
   }
 };

@@ -551,8 +551,18 @@ export default {
   z-index: 1;
 }
 
+.pendidikan-img {
+  max-width: 400px;
+}
+
+#intro .intro-right {
+  order: 0;
+}
+</style>
+
+<style scoped>
 .blob1 {
-  width: 300px;
+  width: 400px;
   position: absolute;
   top: 100px;
   right: -80px;
@@ -567,17 +577,9 @@ export default {
   z-index: 99;
 }
 
-.pendidikan-img {
-  max-width: 400px;
-}
-
-#intro .intro-right {
-  order: 0;
-}
-
 @media (max-width: 1366px) {
   .blob1 {
-    width: 250px;
+    width: 40vw;
     position: absolute;
     top: 100px;
     right: -160px;
@@ -585,12 +587,35 @@ export default {
   }
 
   .blob3 {
-    width: 400px;
+    width: 40vw;
     position: absolute;
     top: 700px;
-    left: -230px;
+    left: -20%;
     z-index: 99;
   }
+}
+
+@media (max-width: 670px){
+  .blob3 {
+  /* width: 400px; */
+  /* position: absolute; */
+  top: 750px;
+  /* left: -250px;
+  z-index: 99; */
+}
+
+}
+
+
+@media (max-width: 650px){
+  .blob3 {
+  /* width: 200px; */
+  /* position: absolute; */
+  top: 850px;
+  /* left: -120px; */
+  /* z-index: 99; */
+}
+
 }
 </style>
 

@@ -2,7 +2,7 @@
   <Navbar />
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
-      <component :is="Component" />
+      <component :key="$route.fullPath" :is="Component" />
     </transition>
   </router-view>
   <Footer />
@@ -19,11 +19,15 @@ export default {
     Footer,
     Navbar,
   },
+  created() {
+    this.$store.dispatch('getArticles');
+  },
   mounted() {
     $(window).ready(() => {
     // eslint-disable-next-line
       AOS.init();
     });
+
     // eslint-disable-next-line
     window.addEventListener("load", AOS.refresh)
   },

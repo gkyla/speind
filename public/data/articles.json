@@ -1,0 +1,54 @@
+{
+   "topArticles": [
+      {
+         "id": "alasan-mengapa-kamu-harus-masuk-smk",
+         "name": "5 Alasan Mengapa Kamu Harus Masuk SMK",
+         "htmlTemplate": "/data/template/alasan-mengapa-kamu-harus-masuk-smk.html",
+         "picture": "/img/article/tkj2.jpeg"
+      },
+      {
+         "id": "Lebih-Baik-Masuk-SMA-Atau-SMK",
+         "name": "Lebih Baik Masuk SMA Atau SMK ?",
+         "htmlTemplate": "/data/template/Lebih-Baik-Masuk-SMA-Atau-SMK.html",
+         "picture": "/img/article/tkj.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "Wqqq",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "/img/article/tkj2.jpeg"
+      },
+      {
+         "id": "3",
+         "name": "Wsss",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "/img/article/tkj2.jpeg"
+      }
+   ],
+   "allArticles": [
+      {
+         "id": "alasan-mengapa-kamu-harus-masuk-smk",
+         "name": "5 Alasan Mengapa Kamu Harus Masuk SMK",
+         "htmlTemplate": "/data/template/alasan-mengapa-kamu-harus-masuk-smk.html",
+         "picture": "/img/article/tkj2.jpeg"
+      },
+      {
+         "id": "Lebih-Baik-Masuk-SMA-Atau-SMK",
+         "name": "Lebih Baik Masuk SMA Atau SMK ?",
+         "htmlTemplate": "/data/template/Lebih-Baik-Masuk-SMA-Atau-SMK.html",
+         "picture": "/img/article/tkj.jpeg"
+      },
+      {
+         "id": "2",
+         "name": "Wwewe",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "/img/article/tkj2.jpeg"
+      },
+      {
+         "id": "3",
+         "name": "Wzcx",
+         "htmlTemplate": "/data/template/1.html",
+         "picture": "/img/article/tkj2.jpeg"
+      }
+   ]
+}
