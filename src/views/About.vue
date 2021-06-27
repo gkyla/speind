@@ -7,7 +7,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-10"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-10 relative z-30"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-duration="1250"
@@ -15,6 +15,8 @@
           <CardAbout
             name="Agits Zakky A"
             :ig="'https://www.instagram.com/kagget_z'"
+            :imgSrc="require('../assets/about/gitkyla.jpg')"
+            imgPosition="bottom"
           >
             <template #description>
               <p class="my-2 text-sm">

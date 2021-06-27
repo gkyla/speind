@@ -68,6 +68,8 @@ footer {
   width: 100%;
   text-align: left;
   padding: 50px 0;
+  position: relative;
+  z-index: 15;
 }
 
 /* footer .footer-left,

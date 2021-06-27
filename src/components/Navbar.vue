@@ -1,7 +1,7 @@
 <template>
-  <header class="header">
+  <header class="header transition-all duration-200">
     <div class="wrapper">
-      <router-link to="#" class="logo">SPEIND</router-link>
+      <router-link to="/" class="logo">SPEIND</router-link>
 
       <div class="fas fa-bars"></div>
 
@@ -87,8 +87,16 @@ export default {
   color: #fff;
 }
 
-.header .logo i {
-  padding: 0 0.5rem;
+.header .logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header .logo:hover {
+  color: #ec4357;
+  transition: 0.5s;
 }
 
 .header .navbar ul {
@@ -155,7 +163,7 @@ export default {
 
   .header .navbar ul li a {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .header .fa-times {
@@ -163,7 +171,7 @@ export default {
   }
 
   .header .nav-toggle {
-    top: 5.8rem;
+    top: 5rem;
   }
 }
 </style>

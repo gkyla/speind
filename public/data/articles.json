@@ -13,15 +13,15 @@
          "picture": "/img/article/desain.jpeg"
       },
       {
-         "id": "2",
-         "name": "Wqqq",
-         "htmlTemplate": "/data/template/1.html",
+         "id": "smk-disaat-pandemi-covid-19",
+         "name": "SMK Disaat Pandemi COVID-19",
+         "htmlTemplate": "/data/template/smk-disaat-pandemi-covid-19.html",
          "picture": "/img/article/listrik-panel.jpeg"
       },
       {
-         "id": "3",
-         "name": "Wsss",
-         "htmlTemplate": "/data/template/1.html",
+         "id": "4-strategi-pembelajaran-di-masa-pandemi-covid-19",
+         "name": "4 Strategi Pembelajaran di Masa Pandemi Covid-19",
+         "htmlTemplate": "/data/template/4-strategi-pembelajaran-di-masa-pandemi-covid-19.html",
          "picture": "/img/article/av.jpeg"
       }
    ],
@@ -39,15 +39,21 @@
          "picture": "/img/article/desain.jpeg"
       },
       {
-         "id": "2",
-         "name": "Wqqq",
-         "htmlTemplate": "/data/template/1.html",
+         "id": "smk-disaat-pandemi-covid-19",
+         "name": "SMK Disaat Pandemi COVID-19",
+         "htmlTemplate": "/data/template/smk-disaat-pandemi-covid-19.html",
          "picture": "/img/article/listrik-panel.jpeg"
       },
       {
-         "id": "3",
-         "name": "Wsss",
-         "htmlTemplate": "/data/template/1.html",
+         "id": "4-strategi-pembelajaran-di-masa-pandemi-covid-19",
+         "name": "4 Strategi Pembelajaran di Masa Pandemi Covid-19",
+         "htmlTemplate": "/data/template/4-strategi-pembelajaran-di-masa-pandemi-covid-19.html",
+         "picture": "/img/article/av.jpeg"
+      },
+      {
+         "id": "smk-masa-kini-dan-yang-akan-datang",
+         "name": "SMK Masa Kini Dan Yang Akan Datang",
+         "htmlTemplate": "/data/template/4-strategi-pembelajaran-daring-di-masa-pandemi-covid-19.html",
          "picture": "/img/article/av.jpeg"
       }
    ]

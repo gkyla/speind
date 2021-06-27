@@ -105,21 +105,16 @@ export default {
 }
 
 @media (max-width: 540px) {
-  .blob2 {
-    /* width: 200px; */
-    /* position: absolute; */
-    /* top: 850px; */
-    display: none;
-    /* left: -120px; */
-    /* z-index: 99; */
-  }
   .blob1 {
     display: none;
-    /* width: 200px; */
-    /* position: absolute; */
-    /* top: 850px; */
-    /* left: -120px; */
-    /* z-index: 99; */
+  }
+
+  .blob2 {
+    display: none;
+  }
+
+  .blob3 {
+    display: none;
   }
 }
 
@@ -175,6 +170,7 @@ html {
   min-height: 100vh;
   /* min-width: 100vw; */
   overflow-x: hidden;
+  overflow-y: hidden;
   color: white;
 }
 

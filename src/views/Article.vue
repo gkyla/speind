@@ -153,11 +153,7 @@ export default {
     };
   },
   methods: {
-    // async getData() {
-    // const res = await fetch('/data/article.json');
-    // const data = await res.json();
-    // this.topArticles = data.topArticles;
-    // },
+
   },
   computed: {
     ...mapGetters([
@@ -166,8 +162,7 @@ export default {
     ]),
   },
   mounted() {
-    // this.getData();
-    // console.log(this.allArticles);
+
   },
 };
 </script>
@@ -298,6 +293,11 @@ export default {
 .box2 {
   grid-row: 1/2;
   grid-column: 2 / 4;
+}
+
+.box3 .panel,
+.box4 .panel {
+  font-size: 17px;
 }
 
 @media (max-width: 1090px) {

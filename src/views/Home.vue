@@ -12,7 +12,8 @@
           data-aos-duration="1250"
         >
           <h1>
-            Sejarah Pendidikan Indonesia - SMK masa Kini dan yang akan datang
+            Sejarah Pendidikan Indonesia <span class="home-strip">-</span> SMK
+            masa Kini dan yang akan datang
           </h1>
           <p>
             Mau tau tentang Sejarah Pendidikan yang ada di indonesia dan smk
@@ -1106,6 +1107,10 @@ export default {
 }
 
 @media (min-width: 1100px) and (max-width: 1199px) {
+  .home-strip {
+    display: none;
+  }
+
   #intro .bottom-left-gradient {
     display: none;
   }

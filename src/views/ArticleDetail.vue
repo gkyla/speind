@@ -49,10 +49,12 @@
                   class="rounded-md another-article-img"
                   alt="article"
                 />
-                <h1 class="text-left text-lg">
-                  <router-link :to="`/article/${article.id}`">{{
-                    article.name
-                  }}</router-link>
+                <h1 class="text-left">
+                  <router-link
+                    :to="`/article/${article.id}`"
+                    class="hover:text-speind-red transition-all"
+                    >{{ article.name }}</router-link
+                  >
                 </h1>
               </div>
             </div>
@@ -78,9 +80,27 @@
           </h1>
           <div class="bg-speind-red w-10 h-1 my-4"></div>
 
-          <div class="w-full p-1 px-5 my-2 rounded-md bg-speind-black">
-            <i class="fas fa-pencil-alt"></i>
-            <span class="ml-4">Minggu, 20 Juni 2021</span>
+          <div
+            class="
+              w-full
+              p-1
+              px-5
+              my-2
+              rounded-md
+              bg-speind-black
+              flex
+              justify-between
+              flex-wrap
+            "
+          >
+            <div>
+              <i class="fas fa-pencil-alt"></i>
+              <span class="ml-4">SPEIND Team</span>
+            </div>
+            <div>
+              <i class="far fa-calendar-alt"></i>
+              <span class="ml-4">Minggu, 20 Juni 2021</span>
+            </div>
           </div>
 
           <div v-html="description"></div>
@@ -100,10 +120,12 @@
                 class="rounded-md another-article-img-mobile"
                 alt="article"
               />
-              <h1 class="text-left text-lg">
-                <router-link :to="`/article/${article.id}`">{{
-                  article.name
-                }}</router-link>
+              <h1 class="text-left hover:text-speind-red transition-all">
+                <router-link
+                  :to="`/article/${article.id}`"
+                  class="hover:text-speind-red transition-all"
+                  >{{ article.name }}</router-link
+                >
               </h1>
             </div>
           </div>

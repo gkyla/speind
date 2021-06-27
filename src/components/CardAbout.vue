@@ -33,14 +33,26 @@
           <a
             :href="ig || '#'"
             target="_blank"
-            class="sosmed-link bg-speind-black p-3"
+            class="
+              sosmed-link
+              bg-speind-black
+              p-3
+              hover:bg-speind-red
+              transition-all
+            "
           >
             <img src="../assets/about/ig.png" class="social-logo" alt="Ig" />
           </a>
           <a
             :href="twitter || '#'"
             target="_blank"
-            class="sosmed-link bg-speind-black p-3"
+            class="
+              sosmed-link
+              bg-speind-black
+              p-3
+              hover:bg-speind-red
+              transition-all
+            "
           >
             <img
               src="../assets/about/twitter.png"
