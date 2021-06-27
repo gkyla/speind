@@ -41,14 +41,12 @@
           <div class="accordion">
             <div class="accordion-header">
               <span>+</span>
-              <h3>Lorem ipsum dolor sit amet?</h3>
+              <h3>Apakah Website Ini PWA / Offline Support ?</h3>
             </div>
             <div class="accordion-body">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-                atque possimus ipsum quae error ullam reiciendis in iste maiores
-                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-                magnam sunt deleniti!
+                Benar, kami menggunakan teknologi Workbox untuk menangani
+                masalah caching
               </p>
             </div>
           </div>
@@ -56,14 +54,12 @@
           <div class="accordion">
             <div class="accordion-header">
               <span>+</span>
-              <h3>Lorem ipsum dolor sit amet?</h3>
+              <h3>Menggunakan Teknologi apa website ini dibuat ?</h3>
             </div>
             <div class="accordion-body">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-                atque possimus ipsum quae error ullam reiciendis in iste maiores
-                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-                magnam sunt deleniti!
+                Untuk stack kami menggunakan Vue untuk framework front-end kami,
+                di ikuti Library AOS untuk animasi , tailwind untuk CSS nya
               </p>
             </div>
           </div>

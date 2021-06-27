@@ -154,7 +154,12 @@
                   Namun sistem pendidikan dalam bentuk sekolah atau menyerupai
                   sekolah baru dimulai pada abad ke-16...
                 </p>
-                <a href="#content" class="intro-cta"> Baca Selengkapnya </a>
+                <router-link
+                  to="/article/smk-masa-kini-dan-yang-akan-datang"
+                  class="intro-cta"
+                >
+                  Baca Selengkapnya
+                </router-link>
               </div>
             </div>
             <div class="col-md-6 col-12">

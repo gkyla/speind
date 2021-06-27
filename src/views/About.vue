@@ -51,6 +51,17 @@
           </CardAbout>
         </div>
       </div>
+
+      <div class="text-center flex flex-col items-center">
+        <h1 class="heading">OUR SCHOOL</h1>
+
+        <iframe
+          id="map"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDCra_ia8_ucDUh2wFFWOzoGgsJetiCH7U&q=Jalan+Alur+Laut+Blok+NN+No.+1%2C+RT.05+%2F+RW.10%2C+Rawabadak+Utara%2C+Koja%2C+RT.5%2FRW.10%2C+Rawabadak+Utara%2C+Kec.+Koja%2C+Kota+Jkt+Utara%2C+Daerah+Khusus+Ibukota+Jakarta+14230"
+          class="my-16 rounded-md w-full relative z-20"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
@@ -67,9 +78,23 @@ export default {
     AOS.init({
       once: false,
     });
+
+
+    // const dumbo = { lat: 40.700802, lng: 73.987602 };
+    // const mapOptions = {
+    //   center: dumbo,
+    //   zoom: 10,
+    // };
+    // // eslint-disable-next-line
+    // const googlemap = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // initMap();
   },
 };
 </script>
 
 <style scoped>
+#map {
+  height: 450px;
+}
 </style>

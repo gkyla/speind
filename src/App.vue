@@ -221,4 +221,37 @@ html {
   right: -2rem;
   transform: rotate(180deg);
 }
+
+@media (max-width: 450px) {
+  .heading {
+    /* margin: 2rem; */
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    position: relative;
+    letter-spacing: 0.2rem;
+  }
+
+  .heading::before,
+  .heading::after {
+    content: "";
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-top: 0.4rem solid #ec4357;
+    border-left: 0.4rem solid white;
+  }
+
+  .heading::before {
+    top: 5.8rem;
+    left: -2rem;
+  }
+
+  .heading::after {
+    bottom: -0.5rem;
+    right: -2rem;
+    transform: rotate(180deg);
+  }
+}
 </style>
