@@ -1,8 +1,5 @@
 <template>
   <div class="wrapper mx-auto" id="home-body">
-    <!-- <img class="blob1" src="../assets/patterns/blob1.svg" />
-    <img class="blob3" src="../assets/patterns/blob3.svg" /> -->
-    <!-- <img class="blob3" src="../assets/patterns/blob3.svg" /> -->
     <section id="intro">
       <div id="intro-top" class="wrapper grid">
         <div
@@ -33,13 +30,7 @@
           />
         </div>
       </div>
-      <!-- <div class="bottom-left-gradient"></div> -->
     </section>
-
-    <!-- Intro Page END -->
-
-    <!-- Content Start -->
-
     <main id="content" class="">
       <section class="section-1">
         <div class="text-center aos-area">
@@ -645,21 +636,6 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
-.heading {
-  /* margin: 2rem; */
-  /* padding-top: 6rem; */
-  /* display: inline-block; */
-  /* font-size: 3.5rem; */
-  /* color: #fff; */
-  /* position: relative; */
-  /* letter-spacing: 0.2rem; */
-}
-
-/* .wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-} */
 
 /* Intro Page
 --------------------- */
@@ -676,16 +652,7 @@ export default {
   padding-top: 120px;
 }
 
-/* .top-right-gradient {
-  position: absolute;
-  top: 0px;
-  right: -10%;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(#ee9ca7, #ec4357);
-  z-index: 129;
-} */
+
 
 #intro .intro-left {
   display: inline-block;
@@ -745,13 +712,11 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-  /* margin-left: 5.9em; */
-  /* padding-top: 80px; */
+
   z-index: 100;
 }
 
 #intro .intro-right img {
-  /* margin-top: -380px; */
   width: 100%;
 }
 
@@ -777,7 +742,6 @@ export default {
 }
 
 .section-1 .row .col-md-6 .gambar img {
-  /* margin-top: 180px; */
   opacity: 0.8;
   width: 95%;
 }
@@ -792,10 +756,7 @@ export default {
 }
 
 .section-1 .row .col-md-6 .panel1 {
-  /* position: absolute; */
-  /* top: 14vmin; */
-  /* left: -14vmin; */
-  /* right: 14vmin; */
+
   background: white;
   border-radius: 3px;
   text-align: left;
@@ -815,7 +776,6 @@ export default {
 }
 
 .section-1 .row .col-md-6 .panel1 p {
-  /* font-size: 1.5em; */
   color: rgba(0, 0, 0, 0.5) !important ;
 }
 
@@ -849,7 +809,6 @@ export default {
 }
 
 .section-2 .row .col-md-6 .gambar img {
-  /* margin-top: 150px; */
   opacity: 0.8;
   width: 80%;
 }
@@ -859,16 +818,12 @@ export default {
 }
 
 .section-2 .row .col-md-6 .panel2 {
-  /* position: absolute; */
-  /* top: 14vmin; */
-  /* left: 14vmin; */
-  /* right: -14vmin; */
+
   background: white;
   border-radius: 3px;
   text-align: left;
   padding: 5vmin;
   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  /* font-family: "Rubik", cursive; */
   z-index: 1;
 }
 
@@ -880,7 +835,6 @@ export default {
 }
 
 .section-2 .row .col-md-6 .panel2 p {
-  /* font-size: 1.5em; */
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -928,7 +882,6 @@ export default {
 
 .desksejarah {
   color: #fff;
-  /* font-size: 1.8em; */
   line-height: 1.75em;
 }
 
@@ -1083,7 +1036,6 @@ export default {
 .w3l-timeline-content-6 .timeline-content-6 .desc {
   margin: 1.4em 0.75em 0 0;
   color: #fff;
-  /* font-size: 1.8em; */
   line-height: 1.75em;
 }
 
@@ -1099,6 +1051,7 @@ export default {
 .w3l-timeline-content-6 .timeline-content-6 .direction-r .desc {
   margin: 1.4em 0 0 0.75em;
 }
+
 /* Resoponsiveness */
 @media (min-width: 1199px) {
   #intro .bottom-left-gradient {
@@ -1156,32 +1109,21 @@ export default {
 
   #intro {
     margin-top: -80px;
-    /* padding-top: 15em; */
-    /* max-height: 1000px !important;x */
     text-align: center;
     display: flex;
     height: 100%;
     padding-bottom: 100px;
     flex-direction: column;
     justify-content: space-around;
-    /* z-index: -9; */
   }
 
   #intro .bottom-left-gradient {
     display: none;
   }
-  /* #intro .bottom-left-gradient {
-    position: absolute;
-    z-index: -1;
-    top: 85%;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  } */
+
 
   .top-right-gradient {
     position: absolute;
-    /* z-index: -1; */
     top: 5%;
     right: -3%;
     width: 100px;
@@ -1190,9 +1132,7 @@ export default {
   }
 
   #intro .intro-right img {
-    /* padding-top: 100px; */
-    /* margin-left: -600px; */
-    /* margin-top: 400px; */
+
     width: 310px;
   }
 
@@ -1206,7 +1146,6 @@ export default {
     margin-bottom: 10px;
   }
 
-  /* intro-left margin-left */
   .intro-left {
     /* margin-left: 100px; */
   }
@@ -1266,7 +1205,6 @@ export default {
 
   .top-right-gradient {
     position: absolute;
-    /* z-index: -1; */
     top: -5%;
     right: -5%;
     width: 100px;
@@ -1328,7 +1266,6 @@ export default {
   }
   .section-2 .row .col-md-6 .gambar img {
     padding-top: 45px;
-    /* width: 63%; */
   }
 }
 
