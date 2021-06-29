@@ -138,16 +138,29 @@ export default {
   border-radius: 15px;
 }
 
-@media screen (min-width: 900px) {
+@media screen and (min-width: 610px){
+  #card-ribbon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
   #card-ribbon #profile-picture {
     height: 250px;
     object-fit: cover;
   }
 }
 
-@media screen (min-width: 1200px) {
+@media screen and (min-width:1040px){
+    #card-ribbon{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   #card-ribbon #profile-picture {
-    height: 300px;
     object-fit: cover;
   }
 }

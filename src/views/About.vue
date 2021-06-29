@@ -7,7 +7,8 @@
         </div>
 
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-10 relative z-30"
+          id="card-about-container"
+          class="gap-7 mt-10 relative z-30"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-duration="1250"
@@ -40,15 +41,18 @@
           </CardAbout>
           <CardAbout
             name="Steven Christian"
-            :imgSrc="require('../assets/images/steven.jpeg')"
+            :imgSrc="require('../assets/about/steven.jpeg')"
             imgPosition="top"
-            ig="https://www.instagram.com/steven_christian20"
+            :ig="'https://www.instagram.com/steven_christian20'"
           >
             <template #description>
-              <p class="my-2 text-sm">Majoring in Software Engineering</p>
+              <p class="my-2 text-sm">
+                Majoring in Majoring in Software Engineering
+              </p>
               <p>SMK 1 Perguruan Cikini</p>
             </template>
           </CardAbout>
+
         </div>
       </div>
 
@@ -78,23 +82,24 @@ export default {
     AOS.init({
       once: false,
     });
-
-
-    // const dumbo = { lat: 40.700802, lng: 73.987602 };
-    // const mapOptions = {
-    //   center: dumbo,
-    //   zoom: 10,
-    // };
-    // // eslint-disable-next-line
-    // const googlemap = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    // initMap();
   },
 };
 </script>
 
 <style scoped>
+#card-about-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 #map {
   height: 450px;
+}
+
+@media screen and (min-width :1040px){
+  #card-about-container{
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr))
+}
 }
 </style>

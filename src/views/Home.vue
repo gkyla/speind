@@ -1052,6 +1052,10 @@ export default {
   margin: 1.4em 0 0 0.75em;
 }
 
+  .home-strip {
+    display: none;
+  }
+
 /* Resoponsiveness */
 @media (min-width: 1199px) {
   #intro .bottom-left-gradient {
@@ -1066,8 +1070,9 @@ export default {
 
 @media (min-width: 1100px) and (max-width: 1199px) {
   .home-strip {
-    display: none;
+    display: inline-block;
   }
+
 
   #intro .bottom-left-gradient {
     display: none;

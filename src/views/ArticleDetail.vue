@@ -30,7 +30,7 @@
             </h2>
             <!-- <div class="bg-speind-red w-10 h-1 my-4"></div> -->
 
-            <div class="grid gap-3">
+            <div class="grid gap-3 sticky top-4">
               <div
                 class="
                   grid
