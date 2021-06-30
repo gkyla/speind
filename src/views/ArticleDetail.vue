@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-speind-black h-full pt-20 my-10">
+  <div class="bg-speind-black h-full pt-20 my-10">
     <div class="wrapper mx-auto">
       <div class="grid-article-detail mx-4" v-if="articleObj">
         <div id="card-detail-article" class="flex flex-col">

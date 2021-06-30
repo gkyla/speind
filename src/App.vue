@@ -27,13 +27,13 @@ export default {
     this.$store.dispatch('getArticles');
   },
   mounted() {
+    // eslint-disable-next-line
+    AOS.refresh()
+
     $(window).ready(() => {
     // eslint-disable-next-line
       AOS.init();
     });
-
-    // eslint-disable-next-line
-    window.addEventListener("load", AOS.refresh)
   },
 };
 </script>
@@ -147,18 +147,10 @@ export default {
   /* overflow: hidden; */
 }
 
-body,
-html {
+body {
   background-color: #18191c;
-  /* height: 100%; */
-  /* width: 100%; */
-  /* overflow-x: hidden; */
-  min-height: 100vh;
-  /* min-width: 100vw; */
+  min-height: 100%;
   overflow-x: hidden;
-  overflow-y: visible;
-  /* overflow: hidden; */
-  /* width: 100vw; */
   width: 100%;
   height: 100%;
 }
@@ -170,8 +162,10 @@ html {
   text-align: center;
   height: 100%;
   width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+  /* min-height: 100vh; */
+  /* overflow-x: hidden; */
+  /* display: flex; */
+  /* flex-direction: column; */
   /* overflow-y: hidden; */
   color: white;
 }

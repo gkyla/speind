@@ -636,7 +636,6 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
-
 /* Intro Page
 --------------------- */
 
@@ -651,8 +650,6 @@ export default {
   min-height: 660px;
   padding-top: 120px;
 }
-
-
 
 #intro .intro-left {
   display: inline-block;
@@ -756,7 +753,6 @@ export default {
 }
 
 .section-1 .row .col-md-6 .panel1 {
-
   background: white;
   border-radius: 3px;
   text-align: left;
@@ -818,7 +814,6 @@ export default {
 }
 
 .section-2 .row .col-md-6 .panel2 {
-
   background: white;
   border-radius: 3px;
   text-align: left;
@@ -1052,9 +1047,9 @@ export default {
   margin: 1.4em 0 0 0.75em;
 }
 
-  .home-strip {
-    display: none;
-  }
+.home-strip {
+  display: none;
+}
 
 /* Resoponsiveness */
 @media (min-width: 1199px) {
@@ -1072,7 +1067,6 @@ export default {
   .home-strip {
     display: inline-block;
   }
-
 
   #intro .bottom-left-gradient {
     display: none;
@@ -1126,7 +1120,6 @@ export default {
     display: none;
   }
 
-
   .top-right-gradient {
     position: absolute;
     top: 5%;
@@ -1137,7 +1130,6 @@ export default {
   }
 
   #intro .intro-right img {
-
     width: 310px;
   }
 
