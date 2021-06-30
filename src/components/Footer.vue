@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="relative z-20">
     <div class="wrapper footer-grid">
       <div class="footer-left">
         <router-link to="/">

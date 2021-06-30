@@ -24,7 +24,7 @@
               >
             </div>
           </div>
-          <div id="article-lainnya-top" class="mt-5 s">
+          <div id="article-lainnya-top" class="mt-5 sticky top-20">
             <h2 class="text-left text-2xl my-2 sticky top-0">
               Article lain nya
             </h2>

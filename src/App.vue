@@ -153,11 +153,14 @@ html {
   /* height: 100%; */
   /* width: 100%; */
   /* overflow-x: hidden; */
-  /* min-height: 100vh; */
+  min-height: 100vh;
   /* min-width: 100vw; */
   overflow-x: hidden;
+  overflow-y: visible;
   /* overflow: hidden; */
   /* width: 100vw; */
+  width: 100%;
+  height: 100%;
 }
 
 #app {
@@ -168,9 +171,8 @@ html {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  /* min-width: 100vw; */
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   color: white;
 }
 
