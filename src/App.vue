@@ -69,15 +69,12 @@ export default {
 
 @media (max-width: 1366px) {
   .blob1 {
-    /* width: 40vw; */
     position: absolute;
     top: 100px;
     right: -160px;
-    /* z-index: 998; */
   }
 
   .blob2 {
-    /* width: 40vw; */
     position: absolute;
     top: 700px;
     left: -270px;
@@ -86,21 +83,14 @@ export default {
 
 @media (max-width: 670px) {
   .blob2 {
-    /* width: 400px; */
-    /* position: absolute; */
     top: 750px;
     left: -270px;
-    /* z-index: 99; */
   }
 }
 
 @media (max-width: 650px) {
   .blob2 {
-    /* width: 200px; */
-    /* position: absolute; */
     top: 850px;
-    /* left: -120px; */
-    /* z-index: 99; */
   }
 }
 
@@ -155,6 +145,13 @@ body {
   height: 100%;
 }
 
+/* Html harus overflow-x hidden biar scrollbar ilang */
+/* Cons : Kalo overflow-x hidden sticky postiion ngga work */
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -162,11 +159,7 @@ body {
   text-align: center;
   height: 100%;
   width: 100%;
-  /* min-height: 100vh; */
   /* overflow-x: hidden; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* overflow-y: hidden; */
   color: white;
 }
 
@@ -188,7 +181,6 @@ body {
 }
 
 .heading {
-  /* margin: 2rem; */
   padding-top: 6rem;
   display: inline-block;
   font-size: 2.5rem;

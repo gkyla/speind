@@ -1,7 +1,7 @@
 <template>
   <div class="bg-speind-black h-full pt-20 my-10">
     <div class="wrapper mx-auto">
-      <div class="grid-article-detail mx-4" v-if="articleObj">
+      <div class="grid-article-detail" v-if="articleObj">
         <div id="card-detail-article" class="flex flex-col">
           <img
             :src="articleObj.picture"
@@ -130,6 +130,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div id="comment" class="bg-speind-gray w-full rounded-md mt-3 px-4">
+        <h1 class="text-2xl">Comment</h1>
       </div>
     </div>
   </div>

@@ -44,7 +44,6 @@ export default {
         // $('.navbar').removeClass('nav-toggle');
 
         if ($(window).scrollTop() > 30) {
-          console.log('wkowko');
           $('.header').css({
             background: '#222831',
             'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)',
