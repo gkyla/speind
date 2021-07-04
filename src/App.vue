@@ -7,9 +7,13 @@
   </router-view>
   <Footer />
 
-  <img class="blob1" src="./assets/patterns/blob1.svg" />
-  <img class="blob2" src="./assets/patterns/blob2.svg" />
-  <img class="blob3" src="./assets/patterns/blob3.svg" />
+  <div
+    class="blob-group absolute top-0 bottom-0 right-0 left-0 overflow-x-hidden"
+  >
+    <img class="blob blob1" src="./assets/patterns/blob1.svg" />
+    <img class="blob blob2" src="./assets/patterns/blob2.svg" />
+    <img class="blob blob3" src="./assets/patterns/blob3.svg" />
+  </div>
 </template>
 
 <script>
@@ -17,22 +21,34 @@ import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
 import $ from 'jquery';
 
-
 export default {
   components: {
     Footer,
     Navbar,
   },
-  created() {
-    this.$store.dispatch('getArticles');
-  },
-  mounted() {
+  async mounted() {
+    if (!this.$store.state.articles) {
+      console.log('test');
+      await this.$store.dispatch('getArticles');
+    }
+
     // eslint-disable-next-line
     AOS.refresh()
 
     $(window).ready(() => {
     // eslint-disable-next-line
-      AOS.init();
+      AOS.init({
+        // Global settings:
+        disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        mirror: false,
+      });
     });
   },
 };
@@ -48,7 +64,7 @@ export default {
   position: absolute;
   top: 100px;
   right: -120px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .blob2 {
@@ -56,7 +72,7 @@ export default {
   position: absolute;
   top: 650px;
   left: -190px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .blob3 {
@@ -64,7 +80,7 @@ export default {
   position: absolute;
   top: 850px;
   right: -190px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 @media (max-width: 1366px) {
@@ -137,31 +153,50 @@ export default {
   /* overflow: hidden; */
 }
 
+/* Html harus overflow-x hidden biar scrollbar ilang */
+/* Cons : Kalo overflow-x hidden sticky postiion ngga work */
+
 body {
   background-color: #18191c;
   min-height: 100%;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  position: relative;
+  min-height: 100vh;
 }
-
 /* Html harus overflow-x hidden biar scrollbar ilang */
 /* Cons : Kalo overflow-x hidden sticky postiion ngga work */
 html {
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+
+.blob-group {
+  pointer-events: none;
 }
 
 #app {
   -webkit-font-smoothing: antialiased;
-  position: relative;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  /* min-height: 100vh; */
   height: 100%;
   width: 100%;
+  position: relative;
+  /* overflow: hidden; */
   /* overflow-x: hidden; */
   color: white;
 }
+
+.blob-group {
+  /* width: 100vw; */
+  /* z-index: -1; */
+}
+
+/* #app .blob {
+  overflow: hidden;
+} */
 
 .bg-speind-dark {
   background-color: #18191c;

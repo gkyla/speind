@@ -67,7 +67,7 @@ export default {
 .header {
   display: flex;
   margin: 0 auto !important;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,7 +78,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding: 1rem 2rem;
 }
 
@@ -107,7 +106,7 @@ export default {
 }
 
 .header .navbar ul li {
-  margin: 0 1.2rem; /* ini */
+  margin: 0 1.2rem;
 }
 
 .header .navbar ul li a {
@@ -141,12 +140,12 @@ export default {
   .header .navbar {
     transition: 0.3s;
     position: fixed;
-    top: -120%;
+    top: -100%;
     left: 0;
     height: auto;
     width: 100%;
     background-color: #18191c;
-    z-index: 999;
+    z-index: 1001;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
     margin-top: -6px;
   }

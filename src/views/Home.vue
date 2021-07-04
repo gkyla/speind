@@ -564,7 +564,7 @@ export default {
   position: absolute;
   top: 100px;
   right: -80px;
-  z-index: 99;
+  z-index: 10;
 }
 
 .blob3 {
@@ -572,63 +572,41 @@ export default {
   position: absolute;
   top: 650px;
   left: -190px;
-  z-index: 99;
+  z-index: 10;
 }
 
 @media (max-width: 1366px) {
   .blob1 {
-    /* width: 40vw; */
     position: absolute;
     top: 100px;
     right: -160px;
-    z-index: 998;
   }
 
   .blob3 {
-    /* width: 40vw; */
     position: absolute;
     top: 700px;
     left: -20%;
-    z-index: 99;
   }
 }
 
 @media (max-width: 670px) {
   .blob3 {
-    /* width: 400px; */
-    /* position: absolute; */
     top: 750px;
-    /* left: -250px;
-  z-index: 99; */
   }
 }
 
 @media (max-width: 650px) {
   .blob3 {
-    /* width: 200px; */
-    /* position: absolute; */
     top: 850px;
-    /* left: -120px; */
-    /* z-index: 99; */
   }
 }
 
 @media (max-width: 540px) {
   .blob3 {
-    /* width: 200px; */
-    /* position: absolute; */
-    /* top: 850px; */
     display: none;
-    /* left: -120px; */
-    /* z-index: 99; */
   }
   .blob1 {
     display: none;
-    /* width: 200px; */
-    /* position: absolute; */
-    /* top: 850px; */
-    /* left: -120px; */
-    /* z-index: 99; */
   }
 }
 </style>
@@ -645,8 +623,8 @@ export default {
   line-height: 1.7;
   font-family: Roboto, sans-serif;
   background-color: #18191c;
-  position: relative;
-  /* overflow: hidden; */
+  /* position: relative; */
+  overflow: hidden;
   min-height: 660px;
   padding-top: 120px;
 }
@@ -715,16 +693,6 @@ export default {
 
 #intro .intro-right img {
   width: 100%;
-}
-
-#intro .bottom-left-gradient {
-  position: absolute;
-  bottom: 10px;
-  left: -9%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(#ec4357, #ee9ca7);
 }
 
 /* Section 1

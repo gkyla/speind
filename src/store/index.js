@@ -12,10 +12,11 @@ export default createStore({
   mutations: {
     setArticles(state, payload) {
       state.articles = payload;
+      console.log(payload);
     },
   },
   actions: {
-    async getArticles({ commit }) {
+    async getArticles({ state, commit }) {
       const articles = await fetch('/data/articles.json');
       const data = await articles.json();
       commit('setArticles', data);
@@ -27,14 +28,11 @@ export default createStore({
   },
   getters: {
     allArticles(state) {
-      return state.articles.allArticles;
+      return state.articles?.allArticles;
     },
     topArticles(state) {
-      return state.articles.topArticles;
+      return state.articles?.topArticles;
     },
-    // getAnotherArticle(state) {
-    //   return state.articles.allArticles.filter((arc, index) => arc.id !== router.currentRoute.params.id && index < 4);
-    // },
   },
   modules: {
   },

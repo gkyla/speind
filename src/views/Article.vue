@@ -1,5 +1,9 @@
 <template>
-  <div id="article" class="wrapper px-5 my-10 bg-speind-black">
+  <div
+    id="article"
+    class="wrapper px-5 my-10 bg-speind-black"
+    v-if="allArticles"
+  >
     <h1 class="heading">ARTICLE</h1>
 
     <div
@@ -128,9 +132,7 @@ export default {
       'topArticles',
     ]),
   },
-  mounted() {
 
-  },
 };
 </script>
 
