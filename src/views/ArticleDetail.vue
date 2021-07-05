@@ -232,7 +232,7 @@
             gap-3
             items-center
             justify-center
-            my-4
+            mt-4
           "
         >
           <div class="bg-white inline-block rounded p-1">
@@ -321,6 +321,7 @@ export default {
   border-radius: 10px;
   color: black;
   padding: 1rem;
+  max-width: 470px;
 }
 
 .google-social-login {
