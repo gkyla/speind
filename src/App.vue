@@ -162,6 +162,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   position: relative;
   min-height: 100vh;
 }
@@ -189,14 +190,6 @@ html {
   color: white;
 }
 
-.blob-group {
-  /* width: 100vw; */
-  /* z-index: -1; */
-}
-
-/* #app .blob {
-  overflow: hidden;
-} */
 
 .bg-speind-dark {
   background-color: #18191c;

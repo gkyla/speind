@@ -28,7 +28,7 @@
               >
             </div>
           </div>
-          <div id="article-lainnya-top" class="mt-5 sticky top-20">
+          <div id="article-lainnya-top" class="mt-5 sticky top-16">
             <h2 class="text-left text-2xl my-2 sticky top-0 overflow-x-hidden">
               Article lain nya
             </h2>
@@ -330,6 +330,7 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 </style>
 
 
