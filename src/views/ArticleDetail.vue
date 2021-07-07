@@ -213,44 +213,63 @@
       </div>
     </div>
 
-    <div id="modal-wrapper">
-      <!-- if not signin -->
-      <div id="modal-content">
-        <div class="bg-speind-black rounded-lg p-4 text-white">
-          <h1 class="text-lg">Seperti nya kamu belum login 🤔</h1>
-          <div class="mt-2">
-            <p>Agar kamu bisa berkomentar kamu harus login terlebih dahulu</p>
-            <p>Yuk login dengan akun gmail kamu</p>
-          </div>
-        </div>
+    <transition name="fade" mode="out-in">
+      <div
+        id="modal-wrapper"
+        v-if="notLoggedIn && modalOpened"
+        @click.stop="closeModal"
+      >
+        <!-- if not signin -->
+        <div id="modal-content" @click.stop>
+          <button
+            id="close-modal-content"
+            class="
+              bg-speind-red
+              py-1
+              px-4
+              rounded-full
+              text-white
+              border-white border-2
+            "
+            @click.stop="closeModal"
+          >
+            x
+          </button>
 
-        <button
-          class="
-            google-social-login
-            p-2
-            flex
-            gap-3
-            items-center
-            justify-center
-            mt-4
-          "
-        >
-          <div class="bg-white inline-block rounded p-1">
-            <img
-              src="../assets/images/google.png"
-              width="30"
-              height="30"
-              alt="google social login"
-              class="inline-block"
-            />
+          <div class="bg-speind-black rounded-lg p-4 text-white">
+            <h1 class="text-lg">Seperti nya kamu belum login 🤔</h1>
+            <div class="mt-2">
+              <p>Agar kamu bisa berkomentar kamu harus login terlebih dahulu</p>
+              <p>Yuk login dengan akun gmail kamu</p>
+            </div>
           </div>
-          <span class="text-white">Sign in with Google</span>
-        </button>
-        <!-- Todo :  -->
-        <!-- Tambah fungsional untuk close dan open modal -->
-        <!-- Tambahkan transition ketika modal terclose dan teropen -->
+
+          <button
+            class="
+              google-social-login
+              p-2
+              flex
+              gap-3
+              items-center
+              justify-center
+              mt-4
+            "
+            @click.stop="googleLogin"
+          >
+            <div class="bg-white inline-block rounded p-1">
+              <img
+                src="../assets/images/google.png"
+                width="30"
+                height="30"
+                alt="google social login"
+                class="inline-block"
+              />
+            </div>
+            <span class="text-white">Sign in with Google</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -263,6 +282,8 @@ export default {
       description: '',
       articleObj: null,
       anotherArticle: null,
+      notLoggedIn: true,
+      modalOpened: false,
     };
   },
   computed: {
@@ -286,8 +307,19 @@ export default {
       this.anotherArticle = anotherArticle;
       console.log(anotherArticle);
     },
+    async googleLogin() {
+      console.log('test google login');
+    },
     submitComment() {
-      console.log('test');
+      if (this.notLoggedIn) {
+        this.modalOpened = true;
+      }
+    },
+    closeModal() {
+      this.modalOpened = false;
+    },
+    doNothing() {
+      console.log('Do Nothing :)');
     },
   },
   async created() {
@@ -304,7 +336,7 @@ export default {
 <style scoped>
 #modal-wrapper {
   position: fixed;
-  z-index: 9999;
+  z-index: 200;
   top: 0;
   right: 0;
   left: 0;
@@ -322,6 +354,15 @@ export default {
   color: black;
   padding: 1rem;
   max-width: 470px;
+  position: relative;
+  z-index: 210;
+}
+
+#close-modal-content {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 210;
 }
 
 .google-social-login {
@@ -330,7 +371,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-
 </style>
 
 
