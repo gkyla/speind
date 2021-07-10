@@ -1,7 +1,4 @@
 import { createStore } from 'vuex';
-// const {route}  'vue-router';
-// import { useRoute } from 'vue-router';
-
 
 export default createStore({
   state: {
