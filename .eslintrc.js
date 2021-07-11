@@ -15,6 +15,7 @@ module.exports = {
     "max-len": "off",
     "no-multiple-empty-lines": "off",
     'vue/comment-directive' : 'off',
-    'no-unused-vars' : 'warn'
+    'no-unused-vars' : 'warn',
+    'import/prefer-default-export' : 'off'
   }
 };

@@ -129,6 +129,48 @@
               </p>
             </div>
 
+            <div v-if="commentsPost">
+              <div
+                v-for="comment in commentsPost"
+                class="mt-4"
+                :key="comment.photoURL"
+              >
+                <div class="flex justify-between mt-2 gap-3">
+                  <img
+                    :src="comment.img"
+                    class="
+                      mt-1
+                      rounded-full
+                      w-12
+                      h-12
+                      object-center object-cover
+                      border-2 border-white
+                    "
+                    :alt="comment.name"
+                  />
+                  <div
+                    class="
+                      flex flex-col
+                      bg-speind-black
+                      rounded-xl
+                      w-full
+                      text-left
+                      py-3
+                      px-3
+                    "
+                  >
+                    <div class="flex justify-between flex-wrap gap-1">
+                      <span class="text-gray-400">{{ comment.name }}</span>
+                      <span class="text-gray-400">{{ comment.createdAt }}</span>
+                    </div>
+                    <p class="mt-1">
+                      {{ comment.comment }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <form
               id="box-form"
               class="flex flex-col mt-3"
@@ -140,7 +182,21 @@
                 >
                 <div class="photo-and-input flex gap-2">
                   <img
-                    src="../assets/about/placeholder.jpg"
+                    v-if="imgDefault && !user"
+                    :src="imgDefault"
+                    alt="img-picture"
+                    class="
+                      w-10
+                      h-10
+                      rounded-full
+                      object-center object-cover
+                      inline-block
+                      border-2 border-speind-white
+                    "
+                  />
+                  <img
+                    v-if="imgDefault && user?.photoURL"
+                    :src="user?.photoURL"
                     alt="img-picture"
                     class="
                       w-10
@@ -154,6 +210,7 @@
                   <input
                     type="text"
                     placeholder="Tulis komentar..."
+                    v-model="comment"
                     class="
                       text-white
                       rounded-xl
@@ -216,7 +273,7 @@
     <transition name="fade" mode="out-in">
       <div
         id="modal-wrapper"
-        v-if="notLoggedIn && modalOpened"
+        v-if="!isLogin && modalOpened"
         @click.stop="closeModal"
       >
         <!-- if not signin -->
@@ -274,7 +331,12 @@
 </template>
 
 <script>
+/* eslint-disable */
 import { mapGetters } from 'vuex';
+import { useAuth,PostsComments } from '../firebase';
+
+const { signInGoogle, user,unsubscribe,isLogin } = useAuth();
+
 
 export default {
   data() {
@@ -282,8 +344,12 @@ export default {
       description: '',
       articleObj: null,
       anotherArticle: null,
-      notLoggedIn: true,
       modalOpened: false,
+      comment: '',
+      imgDefault: require('../assets/images/placeholder-profile.png'),
+      user,
+      isLogin,
+      commentsPost: null,
     };
   },
   computed: {
@@ -308,12 +374,28 @@ export default {
       console.log(anotherArticle);
     },
     async googleLogin() {
-      console.log('test google login');
+      await signInGoogle();
+      this.modalOpened = false;
     },
-    submitComment() {
-      if (this.notLoggedIn) {
+    async submitComment() {
+      if (!isLogin.value) {
         this.modalOpened = true;
+        return
       }
+
+      if(this.comment.trim() === ''|| this.comment === ""){
+        return 
+      }
+
+      console.log(this.user)
+      
+      await PostsComments.add(this.$route.params.id, {
+        name : this.user.displayName,
+        img : this.user.photoURL,
+        comment : this.comment
+      })
+
+      this.loadComments()
     },
     closeModal() {
       this.modalOpened = false;
@@ -321,6 +403,9 @@ export default {
     doNothing() {
       console.log('Do Nothing :)');
     },
+    async loadComments(){
+      this.commentsPost = await PostsComments.load(this.$route.params.id)
+    }
   },
   async created() {
     if (!this.$store.state.articles) {
@@ -329,6 +414,12 @@ export default {
     this.getDetailObj();
     this.getAnotherArticle();
   },
+  async mounted(){
+    this.loadComments()
+  },
+  unmounted(){
+    unsubscribe()
+  }
 
 };
 </script>
