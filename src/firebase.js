@@ -46,7 +46,6 @@ const PostsComments = {
         day: 'numeric',
       }),
     }));
-    console.log(res);
     return res;
   },
 

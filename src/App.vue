@@ -190,7 +190,6 @@ html {
   color: white;
 }
 
-
 .bg-speind-dark {
   background-color: #18191c;
 }
