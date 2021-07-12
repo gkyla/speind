@@ -170,6 +170,18 @@
                 </div>
               </div>
             </div>
+            <transition name="fade" mode="out-in">
+              <div
+                v-if="!commentsPost"
+                class="flex justify-center items-center my-5"
+              >
+                <img
+                  src="../assets/images/loading.svg"
+                  class="w-16 h-16"
+                  alt="Loading"
+                />
+              </div>
+            </transition>
 
             <form
               id="box-form"
