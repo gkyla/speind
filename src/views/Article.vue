@@ -6,6 +6,62 @@
   >
     <h1 class="heading">ARTICLE</h1>
 
+    <div class="mt-10">
+      <swiper
+        :slides-per-view="3"
+        :space-between="50"
+        @swiper="onSwiper"
+        @slideChange="onSlideChange"
+      >
+        <swiper-slide>
+          <img src="/img/article/av.jpeg" alt="" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/img/article/av.jpeg" alt="" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/img/article/av.jpeg" alt="" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="/img/article/av.jpeg" alt="" />
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="mt-5 px-2">
+      <h2 class="text-left text-2xl">Article Informasi & Berita</h2>
+      <div class="bg-speind-red w-20 h-1 mt-2 mb-5"></div>
+
+      <div class="grid-week relative z-20" v-if="topArticles">
+        <div
+          v-for="(article, index) in topArticles"
+          :key="article.id"
+          :class="['box', `box${index + 1}`]"
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1250"
+        >
+          <img class="rounded-md" :src="article.picture" :alt="article.name" />
+          <div class="panel">
+            <router-link
+              :to="`/article/${article.id}`"
+              class="
+                panel-link
+                hover:text-speind-red
+                hover:bg-speind-white
+                transition-all
+                inline-block
+                py-1
+                px-2
+                rounded-md
+              "
+              >{{ article.name }}</router-link
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="
         grid grid-cols-1
@@ -50,40 +106,6 @@
     </div>
 
     <div class="mt-5 px-2">
-      <h2 class="text-left text-2xl">Article Informasi & Berita</h2>
-      <div class="bg-speind-red w-20 h-1 mt-2 mb-5"></div>
-
-      <div class="grid-week relative z-20" v-if="topArticles">
-        <div
-          v-for="(article, index) in topArticles"
-          :key="article.id"
-          :class="['box', `box${index + 1}`]"
-          data-aos="fade-right"
-          data-aos-delay="50"
-          data-aos-duration="1250"
-        >
-          <img class="rounded-md" :src="article.picture" :alt="article.name" />
-          <div class="panel">
-            <router-link
-              :to="`/article/${article.id}`"
-              class="
-                panel-link
-                hover:text-speind-red
-                hover:bg-speind-white
-                transition-all
-                inline-block
-                py-1
-                px-2
-                rounded-md
-              "
-              >{{ article.name }}</router-link
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5 px-2">
       <h2 class="text-left text-2xl">Article Pilihan</h2>
       <div class="bg-speind-red w-20 h-1 mt-2 mb-5"></div>
 
@@ -114,9 +136,15 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper.scss';
 // https://majalahsunday.com/lebih-baik-masuk-sma-atau-smk-ketahui-7-hal-ini-sebelum-memilih/
 
 export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data() {
     return {
       htmlTemplate: null,
@@ -132,6 +160,7 @@ export default {
       'topArticles',
     ]),
   },
+
 
 };
 </script>
