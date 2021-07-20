@@ -8,22 +8,20 @@
 
     <div class="mt-10">
       <swiper
-        :slides-per-view="3"
+        :slides-per-view="1"
         :space-between="50"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
+        :navigation="true"
+        class="h-96 rounded-md"
       >
         <swiper-slide>
-          <img src="/img/article/av.jpeg" alt="" />
+          <img
+            src="/img/article/av.jpeg"
+            class="w-full h-full object-cover"
+            alt=""
+          />
         </swiper-slide>
         <swiper-slide>
-          <img src="/img/article/av.jpeg" alt="" />
-        </swiper-slide>
-        <swiper-slide>
-          <img src="/img/article/av.jpeg" alt="" />
-        </swiper-slide>
-        <swiper-slide>
-          <img src="/img/article/av.jpeg" alt="" />
+          <img src="/img/article/av.jpeg" class="w-full" alt="" />
         </swiper-slide>
       </swiper>
     </div>
@@ -137,7 +135,16 @@
 <script>
 import { mapGetters } from 'vuex';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+
+import SwiperCore, {
+  Navigation,
+} from 'swiper/core';
 import 'swiper/swiper.scss';
+import 'swiper/components/controller/controller.scss';
+import 'swiper/components/navigation/navigation.scss';
+
+// install Swiper modules
+SwiperCore.use([Navigation]);
 // https://majalahsunday.com/lebih-baik-masuk-sma-atau-smk-ketahui-7-hal-ini-sebelum-memilih/
 
 export default {
