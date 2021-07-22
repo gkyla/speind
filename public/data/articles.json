@@ -55,6 +55,12 @@
          "name": "SMK Masa Kini Dan Yang Akan Datang",
          "htmlTemplate": "/data/template/smk-masa-kini-dan-yang-akan-datang.html",
          "picture": "/img/article/ei.jpg"
+      },
+      {
+         "id": "beragam-jurusan-smk-yang-paling-diminati",
+         "name": "Beragam Jurusan SMK Yang Paling Diminati",
+         "htmlTemplate": "/data/template/beragam-jurusan-smk-yang-paling-diminati",
+         "picture": "/img/article/ei.jpg"
       }
    ]
 }
