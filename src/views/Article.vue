@@ -13,6 +13,20 @@
         :navigation="true"
         class="h-96 rounded-md"
       >
+        <div
+          class="
+            w-96
+            h-20
+            bg-speind-gray
+            rounded-r-md
+            absolute
+            bottom-0
+            left-0
+            z-20
+          "
+        >
+          Sari roti
+        </div>
         <swiper-slide>
           <img
             src="/img/article/av.jpeg"
@@ -115,21 +129,25 @@
             alt="Kumpulan Jurusan SMK yang paling diminati"
           />
 
-          <div
-            class="
-              bg-speind-gray
-              rounded-md
-              p-4
-              text-speind-white
-              -mt-20
-              relative
-              z-10
-            "
-          >
-            <h1 class="text-2xl rounded-md text-speind-white text-left">
-              12 Jurusan SMK yang paling dimininati
-            </h1>
-            <div class="bg-speind-red w-10 h-1 my-4"></div>
+          <div class="rounded-md text-speind-white mt-2 py-1 relative z-10">
+            <router-link
+              to="/article/beragam-jurusan-smk-yang-paling-diminati"
+              class="
+                text-left
+                panel-link
+                hover:text-speind-red
+                hover:bg-speind-white
+                transition-all
+                block
+                py-1
+                px-2
+                rounded-md
+                md:text-xl
+              "
+            >
+              Beragam Jurusan SMK Yang Paling Diminati
+            </router-link>
+            <div class="bg-speind-red w-10 h-1 my-2"></div>
             <p class="text-left">
               Buat kamu yang sudah mau memutuskan untuk masuk SMK tapi masih
               bingung untuk masuk jurusan mana ? berikut adalah article tentang
@@ -141,25 +159,29 @@
         <div class="rounded-md">
           <img
             class="rounded-md"
-            src="/img/article/tp.jpeg"
+            src="/img/article/kk-tkr.jpeg"
             alt="Kumpulan Jurusan SMK yang paling diminati"
           />
 
-          <div
-            class="
-              bg-speind-gray
-              rounded-md
-              p-4
-              text-speind-white
-              -mt-20
-              relative
-              z-10
-            "
-          >
-            <h1 class="text-2xl rounded-md text-speind-white text-left">
+          <div class="rounded-md py-1 mt-2 text-speind-white relative z-10">
+            <router-link
+              to="/article/w"
+              class="
+                block
+                text-left
+                panel-link
+                hover:text-speind-red
+                hover:bg-speind-white
+                transition-all
+                py-1
+                px-2
+                rounded-md
+                md:text-xl
+              "
+            >
               12 Jurusan SMK yang paling dimininati
-            </h1>
-            <div class="bg-speind-red w-10 h-1 my-4"></div>
+            </router-link>
+            <div class="bg-speind-red w-10 h-1 my-2"></div>
             <p class="text-left">
               Buat kamu yang sudah mau memutuskan untuk masuk SMK tapi masih
               bingung untuk masuk jurusan mana ? berikut adalah article tentang
