@@ -94,6 +94,7 @@
             <a
               href="http://smkperguruancikini.sch.id/"
               class="intro-cta mt-8 mb-3"
+              target="_blank"
             >
               Kunjungi Website
             </a>
