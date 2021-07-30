@@ -5,11 +5,6 @@
     v-if="allArticles"
   >
     <h1 class="heading">ARTICLE</h1>
-
-    <!-- Swiper  -->
-    <!-- Auto slide dengan content dari articles.json -->
-    <!-- Nampilin judul dan deskripsi yang di truncate -->
-    <!-- Ada link yang menuju ke article tersebut ketika di klik judul ada button link nya -->
     <div class="mt-10">
       <swiper
         :slides-per-view="1"
@@ -29,7 +24,7 @@
           />
           <div
             class="
-              w-96
+              md:w-96
               h-32
               bg-speind-gray
               rounded-r-md
