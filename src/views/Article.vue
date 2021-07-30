@@ -17,29 +17,45 @@
         :navigation="true"
         class="h-96 rounded-md"
       >
-        <div
-          class="
-            w-96
-            h-20
-            bg-speind-gray
-            rounded-r-md
-            absolute
-            bottom-0
-            left-0
-            z-20
-          "
+        <swiper-slide
+          v-for="article in articlesData.allArticles"
+          :key="article.id"
+          class="relative"
         >
-          Sari roti
-        </div>
-        <swiper-slide>
           <img
-            src="/img/article/av.jpeg"
+            :src="article.picture"
             class="w-full h-full object-cover"
             alt=""
           />
-        </swiper-slide>
-        <swiper-slide>
-          <img src="/img/article/av.jpeg" class="w-full" alt="" />
+          <div
+            class="
+              w-96
+              h-32
+              bg-speind-gray
+              rounded-r-md
+              absolute
+              md:bottom-5
+              md:left-5
+              bottom-0
+              left-0
+              z-20
+              grid
+              place-items-center
+            "
+          >
+            <h2 class="text-xl text-align">{{ article.name }}</h2>
+            <router-link
+              :to="`/article/${article.id}`"
+              class="
+                hover:bg-speind-white
+                hover:text-speind-red
+                p-1
+                rounded-md
+                transition-all
+              "
+              >See more</router-link
+            >
+          </div>
         </swiper-slide>
       </swiper>
     </div>
@@ -169,7 +185,7 @@
 
           <div class="rounded-md py-1 mt-2 text-speind-white relative z-10">
             <router-link
-              to="/article/w"
+              to="/article/5-fakta-tentang-sekolah-menengah-kejuruan"
               class="
                 block
                 text-left
@@ -183,7 +199,7 @@
                 md:text-xl
               "
             >
-              12 Jurusan SMK yang paling dimininati
+              5 Fakta Tentang Sekolah Menengah Kejuruan
             </router-link>
             <div class="bg-speind-red w-10 h-1 my-2"></div>
             <p class="text-left">
@@ -205,6 +221,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import SwiperCore, {
   Navigation,
 } from 'swiper/core';
+import DATA from '../../public/data/articles.json';
 import 'swiper/swiper.scss';
 import 'swiper/components/controller/controller.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -221,6 +238,7 @@ export default {
   data() {
     return {
       htmlTemplate: null,
+      articlesData: DATA,
       // topArticles: null,
     };
   },
@@ -233,7 +251,9 @@ export default {
       'topArticles',
     ]),
   },
-
+  mounted() {
+    console.log(this.articlesData);
+  },
 
 };
 </script>

@@ -61,6 +61,12 @@
          "name": "Beragam Jurusan SMK Yang Paling Diminati",
          "htmlTemplate": "/data/template/beragam-jurusan-smk-yang-paling-diminati.html",
          "picture": "/img/article/tp.jpeg"
+      },
+      {
+         "id": "5-fakta-tentang-sekolah-menengah-kejuruan",
+         "name": "5 Fakta Tentang Sekolah Menengah Kejuruan",
+         "htmlTemplate": "/data/template/5-fakta-tentang-sekolah-menengah-kejuruan.html",
+         "picture": "/img/article/kk-tkr.jpeg"
       }
    ]
 }

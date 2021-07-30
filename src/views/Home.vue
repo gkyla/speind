@@ -509,6 +509,110 @@
               </li>
             </ul>
 
+            <section class="banner">
+              <section class="content-slider-product">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">JOSEPHINE WINDA</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Hal utama yang membedakan adalah kualitas
+                        manusianya. Jika memang kualitasnya baik dan mendapat
+                        pendidikan terbaik, tentunya hasil yang diperoleh akan
+                        menjadi lebih maksimal<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">SIR JOHN LUBBOCK</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Sistem pendidikan yang bijaksana
+                        setidaknya akan mengajarkan kita betapa sedikitnya yang
+                        belum diketahui oleh manusia, seberapa banyak yang masih
+                        harus ia pelajari<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">MARIA MONTESSORI</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Tugas dan pendidikan ialah mengusahakan
+                        agar anak tidak mempunyai anggapan keliru bahwa kebaikan
+                        sama dengan bersikap loyo dan kejahatan sama dengan
+                        bersikap giat<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">ROBERT FROST</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan adalah kemampuan untuk
+                        mendengarkan segala sesuatu tanpa membuatmu kehilangan
+                        temperamen atau rasa percaya-dirimu<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">TAN MALAKA</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Tujuan pendidikan itu untuk mempertajam
+                        kecerdasan, memperkukuh kemauan serta memperhalus
+                        perasaan<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">ALBERT EINSTEIN</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan adalah apa yang tersisa setelah
+                        melupakan semua yang dia pelajari di sekolah<span
+                          >"</span
+                        >
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">JOHN DEWEY</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan bukan persiapan untuk hidup
+                        tapi pendidikan adalah hidup itu sendiri<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">MARK TWAIN</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan terutama terdiri dari apa yang
+                        tidak kita pelajari<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">NELSON MANDELA</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan adalah senjata paling ampuh
+                        untuk mengubah dunia<span>"</span>
+                      </p>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <h2 class="motivasi-judul">ARISTOTELES</h2>
+                      <p class="motivasi-text">
+                        <span>"</span>Pendidikan mempunyai akar yang pahit, tapi
+                        buahnya manis<span>"</span>
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </section>
+            </section>
+
             <div class="imagee">
               <img
                 src="../assets/images/undraw_Timeline_re_aw6g.svg"
@@ -530,12 +634,153 @@
 // @ is an alias to /src
 
 export default {
+  /* eslint-disable */
+
   name: 'Home',
   components: {
     // HelloWorld,
   },
+  mounted() {
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      direction: 'vertical',
+      simulateTouch: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  },
 };
 </script>
+
+
+<style scoped>
+.banner {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  overflow: hidden;
+  margin: 100px auto;
+}
+
+/* Swiper */
+
+.content-slider-product {
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background: #222831;
+}
+
+.swiper-container {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+.swiper-slide {
+  color: white;
+  margin: auto;
+  width: 80%;
+  right: 10px;
+  height: auto;
+  text-align: left;
+}
+.motivasi-judul {
+  font-family: Roboto, sans-serif;
+  font-size: 2.5em;
+  margin-top: 175px;
+}
+.motivasi-text {
+  font-family: "Rubik", cursive;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+.motivasi-text span {
+  color: #ec4357;
+}
+
+.swiper-pagination {
+  width: 10px !important;
+  height: 250px !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+.swiper-pagination-progressbar {
+  background: #ec4357;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: white;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  transform: rotate(90deg);
+  color: #ec4357;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white;
+  transition: 0.5s;
+}
+.swiper-button-prev {
+  top: 40%;
+  right: 30px;
+  left: auto;
+}
+.swiper-button-next {
+  top: 60%;
+  right: 30px;
+  left: auto;
+}
+
+@media (max-width: 979px) {
+  .banner {
+    width: 100%;
+    height: 800px;
+    display: block;
+    margin: 200px auto;
+  }
+
+  .content-slider-product {
+    width: 100%;
+    height: 44%;
+  }
+  .swiper-slide {
+    margin: auto;
+    right: 10px;
+    width: 75%;
+  }
+  .motivasi-judul {
+    margin-top: 100px;
+    font-size: 2em;
+  }
+  .motivasi-text {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-container {
+    width: 100%;
+  }
+  .motivasi-judul {
+    font-size: 1.5em;
+  }
+  .motivasi-text {
+    font-size: 1em;
+  }
+}
+</style>
 
 <style scoped>
 .panel {
