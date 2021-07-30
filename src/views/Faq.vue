@@ -63,21 +63,6 @@
               </p>
             </div>
           </div>
-
-          <div class="accordion">
-            <div class="accordion-header">
-              <span>+</span>
-              <h3>Lorem ipsum dolor sit amet?</h3>
-            </div>
-            <div class="accordion-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-                atque possimus ipsum quae error ullam reiciendis in iste maiores
-                nulla. Impedit nam praesentium omnis cupiditate excepturi natus
-                magnam sunt deleniti!
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

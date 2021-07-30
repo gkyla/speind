@@ -38,6 +38,7 @@
               md:left-5
               bottom-0
               left-0
+              right-0
               z-20
               grid
               place-items-center
