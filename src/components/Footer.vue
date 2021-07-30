@@ -3,11 +3,7 @@
     <div class="wrapper footer-grid">
       <div class="footer-left">
         <router-link to="/">
-          <img
-            src="../assets/images/logo.png"
-            class="mx-auto"
-            alt="logospeind"
-          />
+          <img src="../assets/images/logo.png" alt="logospeind" />
         </router-link>
 
         <p class="footer-links">

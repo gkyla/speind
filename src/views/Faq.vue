@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 h-100 py-20">
+  <div class="w-full h-full overflow-y-hidden py-20">
     <section id="faq" class="faq">
       <h1 class="heading mb-20">FAQ</h1>
 

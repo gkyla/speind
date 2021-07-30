@@ -65,6 +65,8 @@
             mt-10
             gap-5
             place-content-center
+            relative
+            z-10
           "
         >
           <img

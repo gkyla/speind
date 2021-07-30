@@ -671,7 +671,7 @@ export default {
   height: 650px;
   display: flex;
   overflow: hidden;
-  margin: 100px auto;
+  margin: 150px auto 70px auto;
 }
 
 /* Swiper */
@@ -1085,7 +1085,6 @@ export default {
 }
 
 .imagee img {
-  margin-top: 150px;
   height: 100%;
   width: 40vw;
 }
