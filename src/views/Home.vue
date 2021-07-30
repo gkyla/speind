@@ -113,7 +113,9 @@
                   menguasai hasil rempah dan memperbudak mereka, beberapa di
                   antaranya yaitu Portugis, Belanda, Inggris, Jepang.
                 </p>
-                <a href="#content" class="intro-cta"> Baca Selengkapnya </a>
+                <router-link to="/sejarah" class="intro-cta">
+                  Baca Selengkapnya
+                </router-link>
               </div>
             </div>
           </div>
