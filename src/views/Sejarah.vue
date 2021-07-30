@@ -31,10 +31,9 @@
               Berikut Adalah Video Sejarah Pendidikan Indonesia
             </h3>
             <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam
-              repudiandae autem asperiores quibusdam omnis commodi alias
-              repellat illum, unde optio temporibus.
+              Menampilkan video mengenai perjalanan Sejarah Pendidikan di
+              Indonesia secara garis besar. Dari zaman sebelum merdeka hingga
+              sekarang tentang istilah pendidikan
             </p>
             <!-- <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p> -->
           </div>
