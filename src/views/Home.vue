@@ -1393,6 +1393,16 @@ export default {
   .section-1 {
     padding-bottom: 55px;
   }
+
+  #intro-top {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    place-items: center;
+  }
+
+  .intro-left {
+    text-align: center;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 641px) {
